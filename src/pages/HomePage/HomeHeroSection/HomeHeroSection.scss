@@ -1,0 +1,35 @@
+@import "src/shared/styles/variables.scss";
+
+.home-hero {
+  padding: 70px 0;
+  color: $brand-white-color;
+}
+
+.home-hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-hero__info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  max-width: 526px;
+}
+
+.home-hero__title {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.23;
+
+  margin-bottom: 85px;
+}
+
+.home-hero__description {
+  margin-bottom: 52px;
+
+  font-size: 14px;
+  line-height: 1.71;
+}

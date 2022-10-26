@@ -1,12 +1,17 @@
 import React from "react";
 import Header from "modules/Header";
+import HomeHeroSection from "./HomeHeroSection";
+
+import "./HomePage.scss";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="background">
       <Header />
-      <h2>HomePage</h2>
-    </>
+      <main>
+        <HomeHeroSection />
+      </main>
+    </div>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as LogoIcon } from "assets/icons/logo.svg";
-import { ReactComponent as LogoTitle } from "assets/icons/logoTitle.svg";
+import { ReactComponent as LogoIcon } from "assets/icons/Logo/logo.svg";
+import { ReactComponent as LogoTitle } from "assets/icons/Logo/logoTitle.svg";
 
 import "./Logo.scss";
 
