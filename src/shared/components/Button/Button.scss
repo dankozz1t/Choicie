@@ -1,0 +1,67 @@
+@import "src/shared/styles/variables.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &:disabled {
+    cursor: no-drop;
+  }
+}
+
+.button--small {
+  min-width: 96px;
+  padding: 8px 16px;
+}
+
+.button--medium {
+  min-width: 129px;
+  padding: 14px 24px;
+}
+
+.button--primary {
+  color: $brand-white-color;
+  background-color: $blue-button-default-color;
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: $blue-button-focus-color;
+  }
+
+  &:disabled {
+    background-color: $blue-button-disabled-color;
+    color: $brand-white-color;
+  }
+}
+
+.button--secondary {
+  color: $brand-white-color;
+  background-color: $yellow-button-color;
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: $yellow-button-focus-color;
+  }
+
+  &:disabled {
+    background-color: $yellow-button-disabled-color;
+    color: $yellow-button-color;
+  }
+}
+
+.button--text-blue {
+  color: $brand-blue-color;
+}
