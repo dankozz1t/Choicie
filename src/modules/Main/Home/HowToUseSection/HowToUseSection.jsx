@@ -4,9 +4,9 @@ import Container from "shared/components/Container";
 
 import "./HowToUseSection.scss";
 
-import { ReactComponent as ScanForOrderIcon } from "assets/icons//HowToUseSection/01_scanForOrder.svg";
+import { ReactComponent as ScanForeignLangIcon } from "assets/icons//HowToUseSection/01_scanForeignLang.svg";
 import { ReactComponent as AutomaticallyTranslatedIcon } from "assets/icons//HowToUseSection/02_automaticallyTranslated.svg";
-import { ReactComponent as ScanForeignLangIcon } from "assets/icons//HowToUseSection/03_scanForeignLang.svg";
+import { ReactComponent as ScanForOrderIcon } from "assets/icons//HowToUseSection/03_scanForOrder.svg";
 import { ReactComponent as ShareIcon } from "assets/icons//HowToUseSection/04_share.svg";
 
 import { ReactComponent as NoBarrierIcon } from "assets/icons//HowToUseSection/05_noBarrier.svg";
@@ -15,13 +15,13 @@ import { ReactComponent as NoInstallIcon } from "assets/icons//HowToUseSection/0
 
 const HowToUseSection = () => {
   return (
-    <div className="how-to-use">
-      <Container className="how-to-use__container">
+    <section className="how-to-use" id="how-to-use">
+      <Container>
         <h2 className="how-to-use__title">How do I use Choicie?</h2>
         <div className="how-to-use__wrapper">
           <ul className="capabilities__list">
             <li className="capabilities__item">
-              <ScanForOrderIcon />
+              <ScanForeignLangIcon />
               <h3 className="capabilities__title">
                 Scan the QR-code on the foreign language menu.
               </h3>
@@ -34,7 +34,7 @@ const HowToUseSection = () => {
               </h3>
             </li>
             <li className="capabilities__item">
-              <ScanForeignLangIcon />
+              <ScanForOrderIcon />
               <h3 className="capabilities__title">
                 Choose and order one or more dishes you like, then show your
                 QR-code from Choicie to the waiter.
@@ -74,7 +74,7 @@ const HowToUseSection = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
