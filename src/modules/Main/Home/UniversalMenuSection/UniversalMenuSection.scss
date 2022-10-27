@@ -1,0 +1,39 @@
+@import "src/shared/styles/variables.scss";
+
+.universal-menu {
+  padding: 70px 0;
+}
+
+.universal-menu__container {
+  display: flex;
+}
+
+.universal-menu__wrapper {
+  width: 570px;
+  margin-right: 86px;
+}
+
+.universal-menu__title {
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.44;
+
+  color: $brand-black-color;
+}
+
+.universal-menu__description {
+  margin-bottom: 52px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $gray_60-color;
+}
+
+.universal-menu__description--margin {
+  display: inline-block;
+  margin-bottom: 38px;
+}

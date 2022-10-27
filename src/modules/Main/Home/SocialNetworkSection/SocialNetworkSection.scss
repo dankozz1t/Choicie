@@ -1,0 +1,48 @@
+@import "src/shared/styles/variables.scss";
+
+.social-network {
+  padding: 70px 0 252px 0;
+}
+
+.social-network__container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.social-network__wrapper {
+  width: 570px;
+  margin-left: 86px;
+}
+
+.social-network__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.44;
+
+  color: $brand-black-color;
+}
+
+.social-network__title {
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.44;
+
+  color: $brand-black-color;
+}
+
+.social-network__description {
+  margin-bottom: 52px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $gray_60-color;
+}
+
+.social-network__description--margin {
+  display: inline-block;
+  margin-bottom: 38px;
+}
