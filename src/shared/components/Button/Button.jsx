@@ -25,7 +25,7 @@ const Button = (props) => {
   });
 
   return (
-    <button onClick={onClick} className={classes} {...otherProps}>
+    <button type="button" onClick={onClick} className={classes} {...otherProps}>
       {children}
     </button>
   );
