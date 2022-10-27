@@ -1,16 +1,18 @@
 import React from "react";
+
 import Button from "shared/components/Button";
+import Container from "shared/components/Container";
+
 import FeaturesList from "./FeaturesList";
 
-import images from "assets/images/HomeHeroSection/restaurants.png";
+import heroImage from "assets/images/HomeHeroSection/hero-desktop@1x.png";
 
 import "./HomeHeroSection.scss";
-import Container from "shared/components/Container";
 
 const HomeHeroSection = () => {
   return (
     <section className="home-hero">
-      <Container>
+      <Container className="home-hero__container">
         <div className="home-hero__wrapper">
           <div className="home-hero__info-box">
             <h1 className="home-hero__title">
@@ -27,7 +29,7 @@ const HomeHeroSection = () => {
             </Button>
           </div>
           <img
-            src={images}
+            src={heroImage}
             alt="A person makes an order through the phone from a restaurant"
           />
         </div>
