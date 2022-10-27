@@ -8,7 +8,7 @@ import Container from "shared/components/Container";
 
 const UniversalMenuSection = () => {
   return (
-    <div className="universal-menu">
+    <section className="universal-menu">
       <Container className="universal-menu__container">
         <div className="universal-menu__wrapper">
           <h2 className="universal-menu__title">
@@ -33,7 +33,7 @@ const UniversalMenuSection = () => {
           alt="Person made food delivery and eats on the balcony"
         />
       </Container>
-    </div>
+    </section>
   );
 };
 

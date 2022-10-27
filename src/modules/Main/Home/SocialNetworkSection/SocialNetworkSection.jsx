@@ -8,7 +8,7 @@ import Container from "shared/components/Container";
 
 const SocialNetworkSection = () => {
   return (
-    <div className="social-network">
+    <section className="social-network">
       <Container className="social-network__container">
         <div className="social-network__wrapper">
           <h2 className="social-network__title">And a new social network</h2>
@@ -32,7 +32,7 @@ const SocialNetworkSection = () => {
           alt="Person made food delivery and eats on the balcony"
         />
       </Container>
-    </div>
+    </section>
   );
 };
 
