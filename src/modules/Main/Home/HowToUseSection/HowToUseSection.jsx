@@ -4,14 +4,14 @@ import Container from "shared/components/Container";
 
 import "./HowToUseSection.scss";
 
-import { ReactComponent as ScanForeignLangIcon } from "assets/icons//HowToUseSection/01_scanForeignLang.svg";
-import { ReactComponent as AutomaticallyTranslatedIcon } from "assets/icons//HowToUseSection/02_automaticallyTranslated.svg";
-import { ReactComponent as ScanForOrderIcon } from "assets/icons//HowToUseSection/03_scanForOrder.svg";
-import { ReactComponent as ShareIcon } from "assets/icons//HowToUseSection/04_share.svg";
+import { ReactComponent as ScanForeignLangIcon } from "assets/icons/HowToUseSection/01_scanForeignLang.svg";
+import { ReactComponent as AutomaticallyTranslatedIcon } from "assets/icons/HowToUseSection/02_automaticallyTranslated.svg";
+import { ReactComponent as ScanForOrderIcon } from "assets/icons/HowToUseSection/03_scanForOrder.svg";
+import { ReactComponent as ShareIcon } from "assets/icons/HowToUseSection/04_share.svg";
 
-import { ReactComponent as NoBarrierIcon } from "assets/icons//HowToUseSection/05_noBarrier.svg";
-import { ReactComponent as ReviewsIcon } from "assets/icons//HowToUseSection/06_reviews.svg";
-import { ReactComponent as NoInstallIcon } from "assets/icons//HowToUseSection/07_noInstall.svg";
+import { ReactComponent as NoBarrierIcon } from "assets/icons/HowToUseSection/05_noBarrier.svg";
+import { ReactComponent as ReviewsIcon } from "assets/icons/HowToUseSection/06_reviews.svg";
+import { ReactComponent as NoInstallIcon } from "assets/icons/HowToUseSection/07_noInstall.svg";
 
 const HowToUseSection = () => {
   return (
