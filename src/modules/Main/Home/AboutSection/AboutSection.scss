@@ -1,7 +1,7 @@
 @import "src/shared/styles/variables.scss";
 
 .about {
-  padding: 68px 0 70px 0;
+  padding: 40px 0 70px 0;
 }
 
 .about__container {
@@ -12,6 +12,7 @@
 }
 
 .about__title {
+  margin-bottom: 41px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.44;
