@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import "./Container.scss";
 
-const Container = ({ children }) => {
-  return <div className="container">{children}</div>;
+const Container = ({ children, className }) => {
+  return <div className={`container ${className}`}>{children}</div>;
 };
 
 Container.propTypes = {
