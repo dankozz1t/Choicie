@@ -6,6 +6,8 @@ $brand-yellow-color: #f2cf7e;
 $brand-black-color: #2a2a38;
 $brand-white-color: #d9d9d9;
 
+$text-white-color: #ffffff;
+
 //Expanded
 $success-color: #74b566;
 $info-color: #76bedb;
@@ -26,12 +28,11 @@ $body-color: #444444;
 //Line
 $line-color: #ececec;
 
-//Icon
-$white-color: #ffffff;
-
 //Background
-$yellow-light-color: #2b146c;
-$blue-dark-color: #f9f5e6;
+$yellow-light-color: #f9f5e6;
+$blue-dark-color: #2b146c;
+$footer-bg-color: #1e0c51;
+$client-bg-color: #f4f0ff;
 
 //Button
 $blue-button-default-color: #6053b1;
@@ -41,6 +42,11 @@ $blue-button-disabled-color: #e0e0f2;
 $yellow-button-color: #f2cf7e;
 $yellow-button-focus-color: #e6c270;
 $yellow-button-disabled-color: #fdf8ec;
+
+$light-button-text-color: #ffffff;
+
+//Input
+$blue-input-bg-color: #3b2186;
 
 //Platform extension
 $desktop: 1728px;
