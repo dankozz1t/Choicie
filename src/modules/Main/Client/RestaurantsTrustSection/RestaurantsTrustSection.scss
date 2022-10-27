@@ -1,0 +1,28 @@
+@import "src/shared/styles/variables.scss";
+
+.restaurants-trust {
+  padding: 40px 0;
+  background-color: $blue-dark-color;
+}
+
+.restaurants-trust__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurants-trust__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.66;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: $text-white-color;
+}
+
+.restaurants-trust__list {
+  display: flex;
+  gap: 50px;
+}

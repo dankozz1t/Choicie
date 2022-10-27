@@ -1,0 +1,62 @@
+@import "src/shared/styles/variables.scss";
+
+.client-hero {
+  padding: 119px 0;
+}
+
+.client-hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-hero__title {
+  margin-bottom: 24px;
+  width: 443px;
+
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.23;
+
+  color: $brand-black-color;
+}
+
+.client-hero__description {
+  margin-bottom: 52px;
+  width: 471px;
+
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $gray_60-color;
+}
+
+.client-hero__link {
+  text-decoration: none;
+  position: relative;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: #3b2186;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 254px;
+    height: 2px;
+
+    background-color: #3b2186;
+    opacity: 0.1;
+
+    transition: opacity 500ms linear;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
