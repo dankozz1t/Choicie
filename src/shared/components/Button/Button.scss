@@ -34,8 +34,7 @@
   color: $brand-white-color;
   background-color: $blue-button-default-color;
 
-  &:hover,
-  :focus,
+  &:focus,
   :active {
     background-color: $blue-button-focus-color;
   }
@@ -50,8 +49,7 @@
   color: $brand-white-color;
   background-color: $yellow-button-color;
 
-  &:hover,
-  :focus,
+  &:focus,
   :active {
     background-color: $yellow-button-focus-color;
   }
