@@ -1,0 +1,32 @@
+[
+  {
+    "id": "home",
+    "to": "/",
+    "text": "Home",
+    "tag": "NavLink"
+  },
+  {
+    "id": "about",
+    "to": "/about",
+    "text": "About",
+    "tag": "a"
+  },
+  {
+    "id": "client",
+    "to": "/client",
+    "text": "Client",
+    "tag": "NavLink"
+  },
+  {
+    "id": "how-to-use",
+    "to": "/how-to-use",
+    "text": "How to use",
+    "tag": "a"
+  },
+  {
+    "id": "contact",
+    "to": "/contact",
+    "text": "Contact",
+    "tag": "a"
+  }
+]

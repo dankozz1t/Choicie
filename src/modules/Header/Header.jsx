@@ -1,19 +1,22 @@
 import React from "react";
+import Container from "shared/components/Container";
 import Logo from "shared/components/Logo";
 import ButtonList from "./components/ButtonList";
 import Navigation from "./components/Navigation";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ navigationItems }) => {
   return (
     <header className="header">
-      <div className="header__box">
-        <Logo />
+      <Container className="header__container">
+        <div className="header__box">
+          <Logo />
 
-        <Navigation />
-      </div>
-      <ButtonList />
+          <Navigation navigationItems={navigationItems} />
+        </div>
+        <ButtonList />
+      </Container>
     </header>
   );
 };

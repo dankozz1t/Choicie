@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "modules/Header";
+import clientNavigationItems from "./clientNavigationItems.json";
 
 const ClientPage = () => {
   return (
     <>
-      <Header />
+      <Header navigationItems={clientNavigationItems} />
       <h2>ClientPage</h2>
     </>
   );
