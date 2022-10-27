@@ -8,6 +8,7 @@ import AboutSection from "modules/Main/Home/AboutSection";
 import UniversalMenuSection from "modules/Main/Home/UniversalMenuSection";
 import SocialNetworkSection from "modules/Main/Home/SocialNetworkSection";
 import HowToUseSection from "modules/Main/Home/HowToUseSection";
+import AllTheWorldSection from "modules/Main/Home/AllTheWorldSection";
 
 import "./HomePage.scss";
 
@@ -21,6 +22,7 @@ const HomePage = () => {
         <UniversalMenuSection />
         <SocialNetworkSection />
         <HowToUseSection />
+        <AllTheWorldSection />
       </main>
     </div>
   );

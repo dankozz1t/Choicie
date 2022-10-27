@@ -1,0 +1,41 @@
+@import "src/shared/styles/variables.scss";
+
+.all-the-world {
+  padding: 130px 0 160px 0;
+  text-align: center;
+}
+
+.all-the-world__text {
+  margin-bottom: 32px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: $brand-blue-color;
+}
+
+.all-the-world__title {
+  margin-bottom: 32px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.44;
+  color: $brand-black-color;
+}
+
+.all-the-world__description {
+  margin-bottom: 122px;
+
+  font-size: 18px;
+  line-height: 1.33;
+
+  color: $gray_60-color;
+
+  &--margin {
+    display: block;
+  }
+}
