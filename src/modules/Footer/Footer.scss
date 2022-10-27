@@ -1,0 +1,23 @@
+@import "src/shared/styles/variables.scss";
+
+.footer {
+  padding: 120px 0 163px 0;
+  background-color: $footer-bg-color;
+
+  background-repeat: no-repeat;
+  background-position: right 0% bottom 0%;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo-text {
+  margin-top: 15px;
+  color: $text-white-color;
+}
+
+.footer__privacy-policy {
+  color: $text-white-color;
+}

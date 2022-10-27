@@ -9,12 +9,14 @@ import UniversalMenuSection from "modules/Main/Home/UniversalMenuSection";
 import SocialNetworkSection from "modules/Main/Home/SocialNetworkSection";
 import HowToUseSection from "modules/Main/Home/HowToUseSection";
 import AllTheWorldSection from "modules/Main/Home/AllTheWorldSection";
+import SubscribeSection from "modules/Main/Home/SubscribeSection";
+import Footer from "modules/Footer";
 
 import "./HomePage.scss";
 
 const HomePage = () => {
   return (
-    <div className="background">
+    <div className="home-background">
       <Header navigationItems={homeNavigationItems} />
       <main>
         <HomeHeroSection />
@@ -23,7 +25,9 @@ const HomePage = () => {
         <SocialNetworkSection />
         <HowToUseSection />
         <AllTheWorldSection />
+        <SubscribeSection />
       </main>
+      <Footer />
     </div>
   );
 };

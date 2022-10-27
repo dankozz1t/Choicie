@@ -1,0 +1,22 @@
+[
+  {
+    "id": "facebook",
+    "text": "Facebook",
+    "href": "https://www.facebook.com/"
+  },
+  {
+    "id": "twitter",
+    "text": "Twitter",
+    "href": "https://twitter.com/"
+  },
+  {
+    "id": "instagram",
+    "text": "Instagram",
+    "href": "https://www.instagram.com/"
+  },
+  {
+    "id": "linkedin",
+    "text": "LinkedIn",
+    "href": "https://www.linkedin.com/"
+  }
+]
