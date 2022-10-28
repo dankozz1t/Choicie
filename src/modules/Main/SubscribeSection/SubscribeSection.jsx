@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Button from "shared/components/Button";
+
 import Container from "shared/components/Container";
+import Button from "shared/components/Button";
 import Input from "shared/components/Input";
 
 import "./SubscribeSection.scss";
@@ -33,7 +34,7 @@ const SubscribeSection = () => {
 
         <form onSubmit={handleFormSubmit}>
           <Input
-            className="input--margin"
+            className="subscribe__input--margin"
             value={input}
             placeholder="Your email"
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
@@ -43,7 +44,7 @@ const SubscribeSection = () => {
             onChange={handleInputChange}
             required
           />
-          <Button secondary medium type="submit" style={{ width: "370px" }}>
+          <Button secondary medium type="submit" className="subscribe__button">
             Register to Newsletter
           </Button>
         </form>

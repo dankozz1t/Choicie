@@ -1,32 +1,5 @@
 @import "src/shared/styles/variables.scss";
 
-.subscribe {
-  padding: 84px 0 70px 0;
-
-  background-color: $blue-dark-color;
-}
-
-.subscribe__container {
-  display: flex;
-  gap: 62px;
-}
-
-.subscribe__title {
-  margin-bottom: 12px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.44;
-
-  color: $text-white-color;
-}
-
-.subscribe__description {
-  width: 550px;
-
-  color: $text-white-color;
-}
-
 .input {
   padding: 14px 24px;
   width: 100%;
@@ -40,8 +13,4 @@
 
   color: $text-white-color;
   background-color: $blue-input-bg-color;
-}
-
-.input--margin {
-  margin-bottom: 15px;
 }

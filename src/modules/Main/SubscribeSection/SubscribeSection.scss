@@ -1,0 +1,67 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
+.subscribe {
+  background-color: $blue-dark-color;
+
+  @include media(mobile-only) {
+    padding: 50px 0 48px 0;
+  }
+
+  @include media(desktop) {
+    padding: 84px 0 70px 0;
+  }
+}
+
+.subscribe__container {
+  @include media(desktop) {
+    display: flex;
+    gap: 62px;
+  }
+}
+
+.subscribe__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+
+  color: $text-white-color;
+
+  @include media(mobile-only) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include media(desktop) {
+    font-size: 36px;
+    line-height: 1.44;
+  }
+}
+
+.subscribe__description {
+  color: $text-white-color;
+
+  @include media(mobile-only) {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.66;
+  }
+
+  @include media(desktop) {
+    width: 550px;
+  }
+}
+
+.subscribe__input--margin {
+  margin-bottom: 15px;
+}
+
+.subscribe__button {
+  @include media(mobile-only) {
+    width: 100%;
+  }
+
+  @include media(desktop) {
+    width: 370px;
+  }
+}
