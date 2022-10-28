@@ -49,7 +49,7 @@ const ClientPage = () => {
         <ReviewSection />
         <SubscribeSection />
       </main>
-      <Footer />
+      <Footer navigationItems={clientNavigationItems} />
     </div>
   );
 };
