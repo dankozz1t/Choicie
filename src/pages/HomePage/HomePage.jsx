@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
 
 import Header from "modules/Header";
 import homeNavigationItems from "./homeNavigationItems.json";
@@ -14,8 +15,6 @@ import SubscribeSection from "modules/Main/SubscribeSection";
 import Footer from "modules/Footer";
 
 import "./HomePage.scss";
-import classNames from "classnames";
-import { useEffect } from "react";
 
 const HomePage = () => {
   const isDesktop = useMediaQuery({ minWidth: 1728 });
@@ -44,14 +43,14 @@ const HomePage = () => {
       />
       <main>
         <HomeHeroSection />
-        <AboutSection />
+        {isDesktop && <AboutSection />}
         <UniversalMenuSection />
         <SocialNetworkSection />
         <HowToUseSection />
         <AllTheWorldSection />
         <SubscribeSection />
       </main>
-      <Footer />
+      <Footer navigationItems={homeNavigationItems} />
     </div>
   );
 };

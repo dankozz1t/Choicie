@@ -1,0 +1,14 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
+.navigation__item {
+  margin-bottom: 12px;
+}
+
+.navigation__link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $text-white-color;
+}

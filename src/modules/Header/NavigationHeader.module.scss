@@ -43,26 +43,3 @@
     border-bottom: 1px solid #4a2f9b;
   }
 }
-
-.active {
-  @include media(desktop) {
-    position: relative;
-  }
-}
-
-.active::before {
-  @include media(desktop) {
-    content: " ";
-
-    position: absolute;
-    top: 32px;
-    left: 50%;
-    transform: translate(-50%);
-
-    width: 16px;
-    height: 3px;
-
-    border-radius: 50px;
-    background-color: $brand-yellow-color;
-  }
-}

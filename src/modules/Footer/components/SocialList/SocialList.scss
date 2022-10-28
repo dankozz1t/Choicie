@@ -1,16 +1,31 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .social-list__item {
   &:not(:last-child) {
-    margin-bottom: 24px;
+    @include media(mobile-only) {
+      margin-bottom: 12px;
+    }
+
+    @include media(desktop) {
+      margin-bottom: 24px;
+    }
   }
 }
 
 .social-list__link {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  text-decoration: none;
 
   color: $text-white-color;
-  text-decoration: none;
+
+  @include media(mobile-only) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  @include media(desktop) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }

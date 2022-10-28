@@ -1,23 +1,61 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .footer {
-  padding: 120px 0 163px 0;
-  background-color: $footer-bg-color;
+  @include media(mobile-only) {
+    padding: 48px 0 126px 0;
+    background-color: $footer-bg-color;
 
-  background-repeat: no-repeat;
-  background-position: right 0% bottom 0%;
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 0%;
+  }
+
+  @include media(desktop) {
+    padding: 120px 0 163px 0;
+    background-color: $footer-bg-color;
+
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 0%;
+  }
 }
 
 .footer__container {
-  display: flex;
-  justify-content: space-between;
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo-text {
-  margin-top: 15px;
   color: $text-white-color;
+
+  @include media(mobile-only) {
+    margin-top: 8px;
+    margin-bottom: 36px;
+  }
+
+  @include media(desktop) {
+    margin-top: 15px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+
+  @include media(mobile-only) {
+    gap: 64px;
+  }
+
+  @include media(desktop) {
+    gap: 115px;
+  }
 }
 
 .footer__privacy-policy {
+  display: block;
   color: $text-white-color;
+
+  @include media(mobile-only) {
+    margin-bottom: 49px;
+  }
 }
