@@ -9,7 +9,7 @@ import "./DashboardSection.scss";
 
 const DashboardSection = () => {
   return (
-    <section className="dashboard">
+    <section className="dashboard" id="about">
       <Container className="dashboard__container">
         <h2 className="dashboard__sub-title">Dashboard Performance</h2>
         <h3 className="dashboard__title">
