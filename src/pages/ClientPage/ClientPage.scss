@@ -3,12 +3,7 @@
 
 .client-background-color {
   background-color: $client-bg-color;
-
-  &--height {
-    @include media(desktop) {
-      height: 870px;
-    }
-  }
+  height: 1000px;
 
   &--dark {
     background-color: $blue-dark-color;

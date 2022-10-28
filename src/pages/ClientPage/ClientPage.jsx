@@ -31,8 +31,8 @@ const ClientPage = () => {
   return (
     <div
       className={classNames(
-        (isBurgerMenu || isDesktop) && "client-background-color--dark",
-        isDesktop && "client-background--height"
+        "client-background-color",
+        isBurgerMenu && !isDesktop && "client-background-color--dark"
       )}
     >
       <Header
