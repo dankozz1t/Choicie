@@ -9,7 +9,7 @@ import UniversalMenuSection from "modules/Main/Home/UniversalMenuSection";
 import SocialNetworkSection from "modules/Main/Home/SocialNetworkSection";
 import HowToUseSection from "modules/Main/Home/HowToUseSection";
 import AllTheWorldSection from "modules/Main/Home/AllTheWorldSection";
-import SubscribeSection from "modules/Main/Home/SubscribeSection";
+import SubscribeSection from "modules/Main/SubscribeSection";
 import Footer from "modules/Footer";
 
 import "./HomePage.scss";
