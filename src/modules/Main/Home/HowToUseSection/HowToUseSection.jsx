@@ -1,8 +1,7 @@
 import React from "react";
-import Button from "shared/components/Button";
-import Container from "shared/components/Container";
 
-import "./HowToUseSection.scss";
+import Container from "shared/components/Container";
+import Button from "shared/components/Button";
 
 import { ReactComponent as ScanForeignLangIcon } from "assets/icons/HowToUseSection/01_scanForeignLang.svg";
 import { ReactComponent as AutomaticallyTranslatedIcon } from "assets/icons/HowToUseSection/02_automaticallyTranslated.svg";
@@ -12,6 +11,8 @@ import { ReactComponent as ShareIcon } from "assets/icons/HowToUseSection/04_sha
 import { ReactComponent as NoBarrierIcon } from "assets/icons/HowToUseSection/05_noBarrier.svg";
 import { ReactComponent as ReviewsIcon } from "assets/icons/HowToUseSection/06_reviews.svg";
 import { ReactComponent as NoInstallIcon } from "assets/icons/HowToUseSection/07_noInstall.svg";
+
+import "./HowToUseSection.scss";
 
 const HowToUseSection = () => {
   return (
@@ -68,7 +69,7 @@ const HowToUseSection = () => {
                 </h3>
               </li>
             </ul>
-            <Button secondary medium textDark>
+            <Button secondary medium textDark className="how-to-use__button">
               Get Started
             </Button>
           </div>
