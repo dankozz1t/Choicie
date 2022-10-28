@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 import Button from "shared/components/Button";
 import Container from "shared/components/Container";
@@ -10,6 +11,8 @@ import heroImage from "assets/images/HomeHeroSection/hero-desktop@1x.png";
 import "./HomeHeroSection.scss";
 
 const HomeHeroSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+
   return (
     <section className="home-hero">
       <Container className="home-hero__container">
@@ -24,11 +27,19 @@ const HomeHeroSection = () => {
               It can make&nbsp;your journey, date or meeting with friends much
               better.
             </p>
-            <Button secondary medium textDark>
-              Get Started
-            </Button>
+
+            {isDesktop ? (
+              <Button secondary medium textDark className="home-hero_button">
+                Get Started
+              </Button>
+            ) : (
+              <Button primary medium className="home-hero_button">
+                Get Started
+              </Button>
+            )}
           </div>
           <img
+            className="home-hero__image"
             src={heroImage}
             alt="A person makes an order through the phone from a restaurant"
           />

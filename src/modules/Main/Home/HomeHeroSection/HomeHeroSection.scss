@@ -1,41 +1,93 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .home-hero {
-  padding: 71px 0 110px 0;
-  color: $brand-white-color;
+  @include media(mobile-only) {
+    padding: 60px 0;
+    color: $brand-white-color;
+  }
+
+  @include media(desktop) {
+    padding: 71px 0 110px 0;
+    color: $brand-white-color;
+  }
 }
 
 .home-hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .home-hero__wrapper {
-  display: flex;
-  justify-content: space-between;
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .home-hero__info-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include media(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-  max-width: 526px;
+    max-width: 526px;
+  }
 }
 
 .home-hero__title {
-  font-weight: 700;
-  font-size: 52px;
-  line-height: 1.23;
+  @include media(mobile-only) {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
 
-  margin-bottom: 85px;
+    color: $brand-black-color;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 85px;
+
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.23;
+  }
 }
 
 .home-hero__description {
-  margin-bottom: 52px;
+  @include media(mobile-only) {
+    margin-bottom: 32px;
 
-  font-size: 14px;
-  line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.66;
+
+    color: $gray_60-color;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 52px;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+.home-hero_button {
+  @include media(mobile-only) {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  @include media(desktop) {
+    min-width: 173px;
+  }
+}
+
+.home-hero__image {
+  @include media(mobile-only) {
+    display: none;
+  }
 }
