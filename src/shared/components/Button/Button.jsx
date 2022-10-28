@@ -12,17 +12,21 @@ const Button = (props) => {
     medium,
     textDark,
     onClick,
+    className,
     ...otherProps
   } = props;
 
-  const classes = classNames({
-    button: true,
-    "button--small": small,
-    "button--medium": medium,
-    "button--primary": primary,
-    "button--secondary": secondary,
-    "button--text-blue": textDark,
-  });
+  const classes = classNames(
+    {
+      button: true,
+      "button--small": small,
+      "button--medium": medium,
+      "button--primary": primary,
+      "button--secondary": secondary,
+      "button--text-blue": textDark,
+    },
+    className
+  );
 
   return (
     <button type="button" onClick={onClick} className={classes} {...otherProps}>

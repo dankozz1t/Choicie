@@ -15,7 +15,7 @@ const ButtonList = () => {
     <ul className="button-list">
       <li>
         {isDesktop ? (
-          <Button primary small>
+          <Button primary medium className="button-list__button">
             <LogoAndroidIcon />
             Android
           </Button>
@@ -27,7 +27,7 @@ const ButtonList = () => {
       </li>
       <li>
         {isDesktop ? (
-          <Button secondary medium textDark>
+          <Button secondary medium textDark className="button-list__button">
             <LogoIOSIcon />
             iOS
           </Button>
