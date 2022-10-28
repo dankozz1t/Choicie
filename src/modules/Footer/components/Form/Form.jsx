@@ -27,7 +27,7 @@ const Form = () => {
   return (
     <form onSubmit={handleFormSubmit} className="form">
       <Input
-        className="input--margin"
+        className="form__input--margin"
         value={data.name}
         placeholder="Name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -39,7 +39,7 @@ const Form = () => {
       />
 
       <Input
-        className="input--margin"
+        className="form__input--margin"
         value={data.email}
         placeholder="Your email"
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
@@ -51,7 +51,7 @@ const Form = () => {
       />
 
       <Input
-        className="input--margin"
+        className="form__input--margin"
         value={data.text}
         placeholder="Enter text"
         id="text"

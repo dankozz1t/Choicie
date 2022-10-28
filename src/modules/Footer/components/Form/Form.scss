@@ -1,3 +1,10 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
 .form {
   width: 298px;
+}
+
+.form__input--margin {
+  margin-bottom: 16px;
 }
