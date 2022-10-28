@@ -1,0 +1,47 @@
+@import "src/shared/styles/variables.scss";
+
+.comment {
+  position: relative;
+  z-index: 10;
+
+  padding: 32px;
+
+  box-shadow: 0px 30px 60px rgba(21, 10, 51, 0.09);
+  border-radius: 8px;
+
+  background: $background-comment-color;
+}
+
+.comment__title {
+  margin-bottom: 16px;
+
+  font-style: italic;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $text-comment-color;
+}
+
+.comment__block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.comment__icon {
+}
+
+.comment__author-block {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $text-comment-color;
+}
+
+.comment__name {
+  display: block;
+  font-weight: 600;
+}
+
+.comment__co-founder {
+}

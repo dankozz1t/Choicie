@@ -1,7 +1,11 @@
 import React from "react";
 
-import heroImage from "assets/images/ClientHeroSection/client-hero-desktop@1x.png";
 import Container from "shared/components/Container";
+
+import heroImage from "assets/images/ClientHeroSection/client-hero-desktop@1x.png";
+
+import Comment from "./components/Comment";
+import { ReactComponent as positiveIcon } from "assets/icons/Comment/01_positive-review.svg";
 
 import "./ClientHeroSection.scss";
 
@@ -23,7 +27,17 @@ const ClientHeroSection = () => {
             Watch Choicie in action — 2 min
           </a>
         </div>
-        <img src={heroImage} alt="the waiter writes down the order" />
+        <div>
+          <img src={heroImage} alt="the waiter writes down the order" />
+
+          <Comment
+            className="client-hero__comment"
+            title=" “We edited the menu after using this app. Now our sales are 30% higher“"
+            name="Anastasia Glorman,"
+            Icon={positiveIcon}
+            coFounder="co-fouder @syngenta"
+          />
+        </div>
       </Container>
     </section>
   );
