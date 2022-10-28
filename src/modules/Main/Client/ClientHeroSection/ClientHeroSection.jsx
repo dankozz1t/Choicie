@@ -1,10 +1,9 @@
 import React from "react";
 
 import Container from "shared/components/Container";
+import Comment from "shared/components/Comment";
 
 import heroImage from "assets/images/ClientHeroSection/client-hero-desktop@1x.png";
-
-import Comment from "./components/Comment";
 import { ReactComponent as positiveIcon } from "assets/icons/Comment/01_positive-review.svg";
 
 import "./ClientHeroSection.scss";
