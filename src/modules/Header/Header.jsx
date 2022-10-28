@@ -7,6 +7,7 @@ import Logo from "shared/components/Logo";
 import ButtonList from "./components/ButtonList";
 import Navigation from "./components/Navigation";
 
+import navigationStyles from "./NavigationHeader.module.scss";
 import "./Header.scss";
 
 const Header = (props) => {
@@ -24,7 +25,12 @@ const Header = (props) => {
           {!isDesktop && <ButtonList />}
         </div>
 
-        {isBurgerMenu && <Navigation navigationItems={navigationItems} />}
+        {isBurgerMenu && (
+          <Navigation
+            navigationItems={navigationItems}
+            styles={navigationStyles}
+          />
+        )}
         {isDesktop && <ButtonList />}
       </Container>
     </header>
