@@ -4,12 +4,12 @@
 .header {
   padding: 8px 0;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding-top: 40px;
   }
 }
 .header__box {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,20 +19,20 @@
 .header__burger-menu {
   margin-right: 16px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     display: none;
   }
 }
 
 .header__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .header__logo {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 120px;
     height: 32px;
 

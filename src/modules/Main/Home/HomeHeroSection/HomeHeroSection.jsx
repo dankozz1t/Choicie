@@ -11,7 +11,7 @@ import heroImage from "assets/images/HomeHeroSection/hero-desktop@1x.png";
 import "./HomeHeroSection.scss";
 
 const HomeHeroSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <section className="home-hero">

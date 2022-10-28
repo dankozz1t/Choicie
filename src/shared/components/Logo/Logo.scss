@@ -6,7 +6,7 @@
   align-items: center;
   gap: 8px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 10px;
   }
 }

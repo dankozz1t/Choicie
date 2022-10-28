@@ -14,7 +14,7 @@ import { ReactComponent as BonusPointsMobileIcon } from "assets/icons/HomeHeroSe
 import "./FeaturesList.scss";
 
 const FeaturesList = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <>

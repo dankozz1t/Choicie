@@ -4,15 +4,16 @@
 .universal-menu {
   padding: 50px 0 40px 0;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 70px 0;
   }
 }
 
 .universal-menu__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 
@@ -21,9 +22,8 @@
 }
 
 .universal-menu__wrapper {
-  @include media(desktop) {
+  @include media(tablet) {
     width: 570px;
-    margin-right: 86px;
   }
 }
 
@@ -31,13 +31,13 @@
   margin-bottom: 24px;
   color: $brand-black-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     font-weight: 600;
     font-size: 24px;
     line-height: 1.16;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 485px;
 
     font-weight: 700;
@@ -51,14 +51,14 @@
 
   color: $gray_60-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 32px;
 
     font-size: 12px;
     line-height: 1.42;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 52px;
 
     font-size: 14px;
@@ -69,21 +69,21 @@
 .universal-menu__description--margin {
   display: block;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 28px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 38px;
   }
 }
 
 .universal-menu__button {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 100%;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 173px;
   }
 }

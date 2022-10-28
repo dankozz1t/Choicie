@@ -2,7 +2,7 @@
 @import "src/shared/styles/mixin.scss";
 
 .navigation {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     position: fixed;
     top: 62px;
     left: 0;
@@ -11,18 +11,18 @@
     background-color: $blue-dark-color;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     align-items: center;
   }
 }
 
 .navigation__list {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     text-align: center;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     gap: 50px;
   }
@@ -36,7 +36,7 @@
 
   color: $brand-white-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     display: block;
     padding: 16px;
 

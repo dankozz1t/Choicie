@@ -2,7 +2,7 @@
 @import "src/shared/styles/mixin.scss";
 
 .footer {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     padding: 48px 0 126px 0;
     background-color: $footer-bg-color;
 
@@ -10,7 +10,7 @@
     background-position: right 0% bottom 0%;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 120px 0 163px 0;
     background-color: $footer-bg-color;
 
@@ -20,7 +20,7 @@
 }
 
 .footer__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     justify-content: space-between;
   }
@@ -29,12 +29,12 @@
 .footer__logo-text {
   color: $text-white-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-top: 8px;
     margin-bottom: 36px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-top: 15px;
   }
 }
@@ -42,11 +42,11 @@
 .footer__wrapper {
   display: flex;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     gap: 64px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 115px;
   }
 }
@@ -55,7 +55,7 @@
   display: block;
   color: $text-white-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 49px;
   }
 }

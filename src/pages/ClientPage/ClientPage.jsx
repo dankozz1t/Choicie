@@ -17,7 +17,7 @@ import Footer from "modules/Footer";
 import "./ClientPage.scss";
 
 const ClientPage = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
   const [isBurgerMenu, setIsBurgerMenu] = useState(isDesktop);
 
   useEffect(() => {

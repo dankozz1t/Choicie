@@ -4,7 +4,7 @@
 .features__title {
   font-weight: 600;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.25;
@@ -12,7 +12,7 @@
     color: $brand-black-color;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 22px;
 
     font-size: 18px;
@@ -20,14 +20,14 @@
   }
 
   &--span {
-    @include media(mobile-only) {
+    @include media(mobile-tablet) {
       display: none;
     }
   }
 }
 
 .features__list {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     justify-content: flex-start;
 
@@ -43,12 +43,12 @@
   gap: 24px;
 
   &:not(:last-child) {
-    @include media(mobile-only) {
+    @include media(mobile-tablet) {
       margin-bottom: 24px;
     }
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 24px;
   }
 }
@@ -58,7 +58,7 @@
   font-size: 14px;
   line-height: 1.71;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     color: $brand-black-color;
   }
 }
@@ -68,7 +68,7 @@
   font-size: 12px;
   line-height: 1.66;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     color: $gray_60-color;
   }
 }

@@ -6,7 +6,7 @@
   height: 320px;
 
   &--height {
-    @include media(desktop) {
+    @include media(tablet) {
       background-color: $blue-dark-color;
       height: 1037px;
     }

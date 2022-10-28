@@ -9,7 +9,7 @@ import { ReactComponent as MapMobileIcon } from "assets/icons/AllTheWorldSection
 import "./AllTheWorldSection.scss";
 
 const AllTheWorldSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <section className="all-the-world">
@@ -28,7 +28,11 @@ const AllTheWorldSection = () => {
           different time zones..
         </p>
 
-        {isDesktop ? <MapDesktopIcon /> : <MapMobileIcon />}
+        {isDesktop ? (
+          <MapDesktopIcon className="all-the-world__icon" />
+        ) : (
+          <MapMobileIcon />
+        )}
       </Container>
     </section>
   );

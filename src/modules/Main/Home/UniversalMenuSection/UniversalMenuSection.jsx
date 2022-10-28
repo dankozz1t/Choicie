@@ -10,7 +10,7 @@ import { ReactComponent as UniversalMenuMobileIcon } from "assets/icons/Universa
 import "./UniversalMenuSection.scss";
 
 const UniversalMenuSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <section className="universal-menu">

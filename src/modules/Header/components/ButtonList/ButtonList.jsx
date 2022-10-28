@@ -9,7 +9,7 @@ import { ReactComponent as LogoIOSIcon } from "assets/icons/Button/ios.svg";
 import "./ButtonList.scss";
 
 const ButtonList = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <ul className="button-list">

@@ -4,17 +4,17 @@
 .subscribe {
   background-color: $blue-dark-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     padding: 50px 0 48px 0;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 84px 0 70px 0;
   }
 }
 
 .subscribe__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     gap: 62px;
   }
@@ -27,12 +27,12 @@
 
   color: $text-white-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     font-size: 18px;
     line-height: 1.33;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     font-size: 36px;
     line-height: 1.44;
   }
@@ -41,13 +41,13 @@
 .subscribe__description {
   color: $text-white-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 24px;
     font-size: 12px;
     line-height: 1.66;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 550px;
   }
 }
@@ -57,11 +57,11 @@
 }
 
 .subscribe__button {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 100%;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 370px;
   }
 }

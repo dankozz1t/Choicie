@@ -11,7 +11,7 @@ const AboutSection = () => {
       <Container className="about__container">
         <h2 className="about__title">Learn more about Choicie in 1 minute</h2>
 
-        <video width="1170" height="650" poster={aboutImage} controls>
+        <video width="100%" height="650" poster={aboutImage} controls>
           <source src="#" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

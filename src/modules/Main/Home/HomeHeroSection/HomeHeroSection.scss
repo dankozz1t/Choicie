@@ -2,19 +2,19 @@
 @import "src/shared/styles/mixin.scss";
 
 .home-hero {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     padding: 60px 0;
     color: $brand-white-color;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 71px 0 110px 0;
     color: $brand-white-color;
   }
 }
 
 .home-hero__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,14 +22,14 @@
 }
 
 .home-hero__wrapper {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .home-hero__info-box {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 .home-hero__title {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 24px;
@@ -49,7 +49,7 @@
     color: $brand-black-color;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 85px;
 
     font-weight: 700;
@@ -59,7 +59,7 @@
 }
 
 .home-hero__description {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 32px;
 
     font-size: 12px;
@@ -68,7 +68,7 @@
     color: $gray_60-color;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 52px;
 
     font-size: 14px;
@@ -76,18 +76,18 @@
   }
 }
 .home-hero_button {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 100%;
     margin-bottom: 60px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     min-width: 173px;
   }
 }
 
 .home-hero__image {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     display: none;
   }
 }

@@ -4,7 +4,7 @@
 .all-the-world {
   padding: 45px 0 60px 0;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 130px 0 160px 0;
     text-align: center;
   }
@@ -16,7 +16,7 @@
 
   color: $brand-blue-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 12px;
     text-align: center;
 
@@ -26,7 +26,7 @@
     letter-spacing: 0.06em;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 32px;
 
     font-weight: 600;
@@ -42,7 +42,7 @@
 
   color: $brand-black-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 32px;
     text-align: center;
 
@@ -50,7 +50,7 @@
     line-height: 1.33;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 32px;
 
     font-size: 36px;
@@ -65,7 +65,7 @@
     display: block;
   }
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 48px;
     text-align: center;
 
@@ -73,10 +73,14 @@
     line-height: 1.42;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 122px;
 
     font-size: 18px;
     line-height: 1.33;
   }
+}
+
+.all-the-world__icon {
+  width: 100%;
 }

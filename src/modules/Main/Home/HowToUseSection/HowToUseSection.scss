@@ -4,17 +4,17 @@
 .how-to-use {
   background-color: $yellow-light-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     padding: 50px 0 55px 0;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 120px 0;
   }
 }
 
 .how-to-use__wrapper {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
   }
 }
@@ -23,7 +23,7 @@
   color: $brand-black-color;
   text-align: center;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 48px;
 
     font-weight: 600;
@@ -31,7 +31,7 @@
     line-height: 1.16;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 100px;
 
     font-weight: 700;
@@ -41,7 +41,7 @@
 }
 
 .capabilities__list {
-  @include media(desktop) {
+  @include media(tablet) {
     display: inline-flex;
     gap: 60px 136px;
     flex-wrap: wrap;
@@ -67,14 +67,14 @@
 
   opacity: 0.4;
 
-  @include media(desktop) {
+  @include media(tablet) {
     left: 200px;
     top: 0px;
   }
 }
 
 .capabilities__title {
-  @include media(desktop) {
+  @include media(tablet) {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -84,14 +84,14 @@
 }
 
 .get-started {
-  @include media(desktop) {
+  @include media(tablet) {
     position: relative;
     width: 630px;
   }
 }
 
 .get-started::after {
-  @include media(desktop) {
+  @include media(tablet) {
     content: "";
     position: absolute;
     left: -65px;
@@ -104,11 +104,11 @@
 }
 
 .get-started__list {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 32px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -120,7 +120,7 @@
 .get-started__item {
   display: flex;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     gap: 12px;
 
     &:not(:last-child) {
@@ -128,7 +128,7 @@
     }
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 24px;
   }
 }
@@ -138,23 +138,23 @@
 
   color: $brand-black-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     font-size: 14px;
     line-height: 1.71;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 .how-to-use__button {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 100%;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 173px;
   }
 }

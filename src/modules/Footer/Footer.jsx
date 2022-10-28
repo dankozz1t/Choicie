@@ -16,7 +16,7 @@ import navigationStyles from "./NavigationFooter.module.scss";
 import "./Footer.scss";
 
 const Footer = ({ navigationItems }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <footer

@@ -4,11 +4,11 @@
 .button-list {
   display: flex;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     gap: 13px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 16px;
   }
 }

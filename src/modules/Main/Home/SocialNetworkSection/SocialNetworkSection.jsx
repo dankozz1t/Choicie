@@ -10,7 +10,7 @@ import { ReactComponent as SocialNetworkMobileIcon } from "assets/icons/SocialNe
 import "./SocialNetworkSection.scss";
 
 const SocialNetworkSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <section className="social-network">

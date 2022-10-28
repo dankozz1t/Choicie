@@ -4,14 +4,15 @@
 .social-network {
   padding: 40px 0 50px 0;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding: 70px 0 252px 0;
   }
 }
 
 .social-network__container {
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -20,9 +21,8 @@
 }
 
 .social-network__wrapper {
-  @include media(desktop) {
+  @include media(tablet) {
     width: 570px;
-    margin-left: 86px;
   }
 }
 
@@ -30,13 +30,13 @@
   margin-bottom: 24px;
   color: $brand-black-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     font-weight: 600;
     font-size: 24px;
     line-height: 1.16;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.44;
@@ -48,14 +48,14 @@
 
   color: $gray_60-color;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 32px;
 
     font-size: 12px;
     line-height: 1.42;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 52px;
 
     font-size: 14px;
@@ -66,21 +66,21 @@
 .social-network__description--margin {
   display: block;
 
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     margin-bottom: 28px;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     margin-bottom: 38px;
   }
 }
 
 .social-network__button {
-  @include media(mobile-only) {
+  @include media(mobile-tablet) {
     width: 100%;
   }
 
-  @include media(desktop) {
+  @include media(tablet) {
     width: 173px;
   }
 }
