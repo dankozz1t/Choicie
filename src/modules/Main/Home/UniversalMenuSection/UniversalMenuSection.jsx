@@ -1,15 +1,29 @@
 import React from "react";
 import Button from "shared/components/Button";
+import { useMediaQuery } from "react-responsive";
 
-import learnMoreImage from "assets/images/UniversalMenuSection/universalMenu-desktop@1x.png";
-
-import "./UniversalMenuSection.scss";
 import Container from "shared/components/Container";
 
+import learnMoreImage from "assets/images/UniversalMenuSection/universalMenu-desktop@1x.png";
+import { ReactComponent as UniversalMenuMobileIcon } from "assets/icons/UniversalMenuSection/01_universal-menu.svg";
+
+import "./UniversalMenuSection.scss";
+
 const UniversalMenuSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+
   return (
     <section className="universal-menu">
       <Container className="universal-menu__container">
+        {isDesktop ? (
+          <img
+            src={learnMoreImage}
+            alt="Person made food delivery and eats on the balcony"
+          />
+        ) : (
+          <UniversalMenuMobileIcon className="universal-menu__mobile-icon" />
+        )}
+
         <div className="universal-menu__wrapper">
           <h2 className="universal-menu__title">
             Choicie is a universal menu for all restaurants.
@@ -23,15 +37,10 @@ const UniversalMenuSection = () => {
             dishes. Place your order on the way to the restaurant, then just
             show the QR-code to the waiter.
           </p>
-          <Button primary medium>
+          <Button primary medium className="universal-menu__button">
             Get Started
           </Button>
         </div>
-
-        <img
-          src={learnMoreImage}
-          alt="Person made food delivery and eats on the balcony"
-        />
       </Container>
     </section>
   );
