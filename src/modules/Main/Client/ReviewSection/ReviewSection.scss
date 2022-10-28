@@ -1,0 +1,72 @@
+@import "src/shared/styles/variables.scss";
+
+.review {
+  padding: 80px 0;
+}
+
+.review__container {
+  display: flex;
+  align-items: center;
+}
+
+.review__image {
+  margin-right: -70px;
+  margin-top: -110px;
+  z-index: 32;
+}
+
+.review__info-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 80px 70px 55px 150px;
+
+  background-color: #f7f4ff;
+  border-radius: 8px;
+}
+
+.review__left-block {
+  position: relative;
+
+  width: 442px;
+
+  &::after {
+    content: " ";
+
+    position: absolute;
+    top: 0;
+    right: -60px;
+
+    height: 168px;
+    width: 2px;
+
+    background-color: #ddd7ed;
+  }
+}
+
+.review__right-block {
+  width: 198px;
+}
+
+.review__title {
+  margin-bottom: 16px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+
+  color: $brand-blue-color;
+}
+
+.review__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $brand-black-color;
+
+  &--margin-top {
+    margin-top: 32px;
+  }
+}
