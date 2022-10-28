@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "shared/components/Button";
 import { useMediaQuery } from "react-responsive";
 
 import Container from "shared/components/Container";
+import Button from "shared/components/Button";
 
 import learnMoreImage from "assets/images/UniversalMenuSection/universalMenu-desktop@1x.png";
 import { ReactComponent as UniversalMenuMobileIcon } from "assets/icons/UniversalMenuSection/01_universal-menu.svg";
