@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import Header from "modules/Header";
 import homeNavigationItems from "./homeNavigationItems.json";
@@ -13,11 +14,34 @@ import SubscribeSection from "modules/Main/SubscribeSection";
 import Footer from "modules/Footer";
 
 import "./HomePage.scss";
+import classNames from "classnames";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const [isBurgerMenu, setIsBurgerMenu] = useState(isDesktop);
+
+  useEffect(() => {
+    setIsBurgerMenu(isDesktop);
+  }, [isDesktop]);
+
+  const handleMenuClick = () => {
+    setIsBurgerMenu(!isBurgerMenu);
+  };
+
   return (
-    <div className="home-background">
-      <Header navigationItems={homeNavigationItems} />
+    <div
+      className={classNames(
+        (isBurgerMenu || isDesktop) && "home-background-color",
+        isDesktop && "home-background-color--height"
+      )}
+    >
+      <Header
+        isBurgerMenu={isBurgerMenu}
+        isDesktop={isDesktop}
+        handleMenuClick={handleMenuClick}
+        navigationItems={homeNavigationItems}
+      />
       <main>
         <HomeHeroSection />
         <AboutSection />

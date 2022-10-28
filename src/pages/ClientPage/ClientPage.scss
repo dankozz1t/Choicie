@@ -1,6 +1,17 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
-.client-background {
+.client-background-color {
   background-color: $client-bg-color;
-  height: 870px;
+
+  &--height {
+    @include media(desktop) {
+      height: 870px;
+    }
+  }
+
+  &--dark {
+    background-color: $blue-dark-color;
+    height: 265px;
+  }
 }

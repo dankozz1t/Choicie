@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
 
 import Header from "modules/Header";
 
@@ -15,9 +17,30 @@ import Footer from "modules/Footer";
 import "./ClientPage.scss";
 
 const ClientPage = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+  const [isBurgerMenu, setIsBurgerMenu] = useState(isDesktop);
+
+  useEffect(() => {
+    setIsBurgerMenu(isDesktop);
+  }, [isDesktop]);
+
+  const handleMenuClick = () => {
+    setIsBurgerMenu(!isBurgerMenu);
+  };
+
   return (
-    <div className="client-background">
-      <Header navigationItems={clientNavigationItems} />
+    <div
+      className={classNames(
+        (isBurgerMenu || isDesktop) && "client-background-color--dark",
+        isDesktop && "client-background--height"
+      )}
+    >
+      <Header
+        isBurgerMenu={isBurgerMenu}
+        isDesktop={isDesktop}
+        handleMenuClick={handleMenuClick}
+        navigationItems={clientNavigationItems}
+      />
       <main>
         <ClientHeroSection />
         <RestaurantsTrustSection />

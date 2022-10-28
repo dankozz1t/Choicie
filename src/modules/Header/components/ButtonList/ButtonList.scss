@@ -1,4 +1,14 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
 .button-list {
   display: flex;
-  gap: 16px;
+
+  @include media(mobile-only) {
+    gap: 13px;
+  }
+
+  @include media(desktop) {
+    gap: 16px;
+  }
 }

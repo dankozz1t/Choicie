@@ -1,35 +1,68 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .navigation {
-  display: flex;
-  gap: 50px;
+  @include media(mobile-only) {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100vw;
+
+    background-color: $blue-dark-color;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__list {
+  @include media(mobile-only) {
+    text-align: center;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .navigation__link {
   text-decoration: none;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 1.25;
 
   color: $brand-white-color;
+
+  @include media(mobile-only) {
+    display: block;
+    padding: 16px;
+
+    border-bottom: 1px solid #4a2f9b;
+  }
 }
 
 .active {
-  position: relative;
+  @include media(desktop) {
+    position: relative;
+  }
 }
 
 .active::before {
-  content: " ";
+  @include media(desktop) {
+    content: " ";
 
-  position: absolute;
-  top: 32px;
-  left: 50%;
-  transform: translate(-50%);
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translate(-50%);
 
-  width: 16px;
-  height: 3px;
+    width: 16px;
+    height: 3px;
 
-  border-radius: 50px;
-  background-color: $brand-yellow-color;
+    border-radius: 50px;
+    background-color: $brand-yellow-color;
+  }
 }

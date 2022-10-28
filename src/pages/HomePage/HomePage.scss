@@ -1,6 +1,14 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
-.home-background {
+.home-background-color {
   background-color: $blue-dark-color;
-  height: 1037px;
+  height: 320px;
+
+  &--height {
+    @include media(desktop) {
+      background-color: $blue-dark-color;
+      height: 1037px;
+    }
+  }
 }

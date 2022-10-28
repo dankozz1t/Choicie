@@ -6,21 +6,27 @@ import "./Navigation.scss";
 const Navigation = ({ navigationItems }) => {
   return (
     <nav className="navigation">
-      {navigationItems.map(({ id, to, text, tag }) => {
-        if (tag === "a") {
-          return (
-            <a className="navigation__link" key={id} href={`#${id}`}>
-              {text}
-            </a>
-          );
-        }
+      <ul className="navigation__list">
+        {navigationItems.map(({ id, to, text, tag }) => {
+          if (tag === "a") {
+            return (
+              <li className="navigation__item" key={id}>
+                <a className="navigation__link" href={`#${id}`}>
+                  {text}
+                </a>
+              </li>
+            );
+          }
 
-        return (
-          <NavLink className="navigation__link" key={id} end to={to}>
-            {text}
-          </NavLink>
-        );
-      })}
+          return (
+            <li className="navigation__item" key={id}>
+              <NavLink className="navigation__link" end to={to}>
+                {text}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 };

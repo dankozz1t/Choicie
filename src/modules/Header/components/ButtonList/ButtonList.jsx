@@ -1,4 +1,6 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
+
 import Button from "shared/components/Button";
 
 import { ReactComponent as LogoAndroidIcon } from "assets/icons/Button/android.svg";
@@ -7,19 +9,33 @@ import { ReactComponent as LogoIOSIcon } from "assets/icons/Button/ios.svg";
 import "./ButtonList.scss";
 
 const ButtonList = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+
   return (
     <ul className="button-list">
       <li>
-        <Button primary medium>
-          <LogoAndroidIcon />
-          Android
-        </Button>
+        {isDesktop ? (
+          <Button primary small>
+            <LogoAndroidIcon />
+            Android
+          </Button>
+        ) : (
+          <Button primary small>
+            <LogoAndroidIcon />
+          </Button>
+        )}
       </li>
       <li>
-        <Button secondary medium textDark>
-          <LogoIOSIcon />
-          iOS
-        </Button>
+        {isDesktop ? (
+          <Button secondary medium textDark>
+            <LogoIOSIcon />
+            iOS
+          </Button>
+        ) : (
+          <Button secondary small>
+            <LogoIOSIcon />
+          </Button>
+        )}
       </li>
     </ul>
   );

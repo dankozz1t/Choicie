@@ -1,17 +1,50 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
 .header {
-  padding-top: 40px;
+  padding: 8px 0;
+
+  @include media(desktop) {
+    padding-top: 40px;
+  }
+}
+.header__box {
+  @include media(mobile-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header__burger-menu {
+  margin-right: 16px;
+
+  @include media(desktop) {
+    display: none;
+  }
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.header__box {
-  display: flex;
-  align-items: center;
-  gap: 67px;
+.header__logo {
+  @include media(mobile-only) {
+    width: 120px;
+    height: 32px;
 
-  margin-right: 117px;
+    margin-right: 30px;
+  }
 }
+
+// .header__box {
+//   @include media(desktop) {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     width: 100%;
+//   }
+// }

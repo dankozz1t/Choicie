@@ -1,5 +1,12 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+
+  @include media(desktop) {
+    gap: 10px;
+  }
 }
