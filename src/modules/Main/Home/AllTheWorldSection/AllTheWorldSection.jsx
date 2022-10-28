@@ -1,18 +1,25 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
+
 import Container from "shared/components/Container";
+
+import { ReactComponent as MapDesktopIcon } from "assets/icons/AllTheWorldSection/01_desktop-map.svg";
+import { ReactComponent as MapMobileIcon } from "assets/icons/AllTheWorldSection/01_mobile-map.svg";
 
 import "./AllTheWorldSection.scss";
 
-import mapImage from "assets/images/AllTheWorldSection/map.png";
-
 const AllTheWorldSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1728 });
+
   return (
     <section className="all-the-world">
       <Container className="all-the-world__container">
         <p className="all-the-world__text">
           We work with cafe and restaurant owners from
         </p>
-        <h2 className="all-the-world__title">All the world</h2>
+        <h2 className="all-the-world__title">
+          {isDesktop ? "All the world" : "10 countries, 5 continents"}
+        </h2>
         <p className="all-the-world__description">
           <span className="all-the-world__description--margin">
             And there will be more!
@@ -21,10 +28,7 @@ const AllTheWorldSection = () => {
           different time zones..
         </p>
 
-        <img
-          src={mapImage}
-          alt="A map of the world on which the places where the restaurant exists are marked"
-        />
+        {isDesktop ? <MapDesktopIcon /> : <MapMobileIcon />}
       </Container>
     </section>
   );

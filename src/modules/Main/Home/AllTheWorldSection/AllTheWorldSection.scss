@@ -1,41 +1,82 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .all-the-world {
-  padding: 130px 0 160px 0;
-  text-align: center;
+  padding: 45px 0 60px 0;
+
+  @include media(desktop) {
+    padding: 130px 0 160px 0;
+    text-align: center;
+  }
 }
 
 .all-the-world__text {
-  margin-bottom: 32px;
-
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 
   color: $brand-blue-color;
+
+  @include media(mobile-only) {
+    margin-bottom: 12px;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    letter-spacing: 0.06em;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 32px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+
+    letter-spacing: 0.08em;
+  }
 }
 
 .all-the-world__title {
-  margin-bottom: 32px;
-
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.44;
+
   color: $brand-black-color;
+
+  @include media(mobile-only) {
+    margin-bottom: 32px;
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 32px;
+
+    font-size: 36px;
+    line-height: 1.44;
+  }
 }
 
 .all-the-world__description {
-  margin-bottom: 122px;
-
-  font-size: 18px;
-  line-height: 1.33;
-
   color: $gray_60-color;
 
   &--margin {
     display: block;
+  }
+
+  @include media(mobile-only) {
+    margin-bottom: 48px;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.42;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 122px;
+
+    font-size: 18px;
+    line-height: 1.33;
   }
 }
