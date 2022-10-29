@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "shared/components/Button";
-import Container from "shared/components/Container";
+import { useMediaQuery } from "react-responsive";
 
-import "./StagesDevelopmentSection.scss";
+import Container from "shared/components/Container";
+import Button from "shared/components/Button";
 
 import { ReactComponent as QualityIcon } from "assets/icons/StagesDevelopment/01_quality.svg";
 import { ReactComponent as ReputationIcon } from "assets/icons/StagesDevelopment/02_reputation.svg";
@@ -11,7 +11,11 @@ import { ReactComponent as UserIcon } from "assets/icons/StagesDevelopment/04_us
 import { ReactComponent as HappyCustomerIcon } from "assets/icons/StagesDevelopment/05_happy-customer.svg";
 import { ReactComponent as ChartIcon } from "assets/icons/StagesDevelopment/06_chart.svg";
 
+import "./StagesDevelopmentSection.scss";
+
 const StagesDevelopmentSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
   return (
     <section className="stages-development">
       <Container>
@@ -55,11 +59,15 @@ const StagesDevelopmentSection = () => {
           </li>
         </ul>
         <h3 className="stages-development__button-label">What Does it Take?</h3>
-        <Button primary medium style={{ width: "370px" }}>
+        <Button primary medium className="stages-development__button">
           Become a Choicie partner!
         </Button>
       </Container>
-      <ChartIcon className="stages-development__chart" />
+      <ChartIcon
+        width={isDesktop ? null : "100%"}
+        height={isDesktop ? null : "100%"}
+        className="stages-development__chart"
+      />
     </section>
   );
 };
