@@ -1,4 +1,6 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
+
 import Container from "shared/components/Container";
 
 import { ReactComponent as CadburyIcon } from "assets/icons/RestaurantsTrustSection/01_cadbury.svg";
@@ -10,6 +12,8 @@ import { ReactComponent as SyngentaIcon } from "assets/icons/RestaurantsTrustSec
 import "./RestaurantsTrustSection.scss";
 
 const RestaurantsTrustSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
   return (
     <section className="restaurants-trust">
       <Container className="restaurants-trust__container">
@@ -19,19 +23,19 @@ const RestaurantsTrustSection = () => {
 
         <ul className="restaurants-trust__list">
           <li>
-            <CadburyIcon />
+            <CadburyIcon width={isDesktop ? "100%" : "56px"} />
           </li>
           <li>
-            <KuspyKremeIcon />
+            <KuspyKremeIcon width={isDesktop ? "100%" : "69px"} />
           </li>
           <li>
-            <JustEatIcon />
+            <JustEatIcon width={isDesktop ? "100%" : "99px"} />
           </li>
           <li>
-            <TheFridaysIcon />
+            <TheFridaysIcon width={isDesktop ? "100%" : "56px"} />
           </li>
           <li>
-            <SyngentaIcon />
+            <SyngentaIcon width={isDesktop ? "100%" : "80px"} />
           </li>
         </ul>
       </Container>
