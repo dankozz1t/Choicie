@@ -75,6 +75,7 @@
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
+  touch-action: none;
   -ms-touch-action: none;
 
   .swiper-scrollbar-disabled > &,
