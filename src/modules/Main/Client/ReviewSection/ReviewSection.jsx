@@ -1,7 +1,9 @@
 import React from "react";
 import Container from "shared/components/Container";
 
-import reviewImage from "assets/images/ReviewSection/photo-desktop@1x.png";
+import reviewDesktop1xImage from "assets/images/ReviewSection/photo-desktop@1x.png";
+import reviewDesktop2xImage from "assets/images/ReviewSection/photo-desktop@2x.png";
+import reviewMobileImage from "assets/images/ReviewSection/photo-mobile@1x.png";
 
 import "./ReviewSection.scss";
 
@@ -9,11 +11,23 @@ const ReviewSection = () => {
   return (
     <section className="review">
       <Container className="review__container">
-        <img
-          className="review__image"
-          src={reviewImage}
-          alt="Women in white dress"
-        />
+        <picture className="review__picture">
+          <source
+            srcSet={`${reviewDesktop1xImage} 1x, ${reviewDesktop2xImage} 2x`}
+            media="(min-width:1728px)"
+          />
+          <source
+            srcSet={`${reviewMobileImage} 1x`}
+            media="(max-width:1000px)"
+          />
+
+          <img
+            className="review__image"
+            src={reviewMobileImage}
+            alt="Women in white dress"
+          />
+        </picture>
+
         <div className="review__info-box">
           <div className="review__left-block">
             <h2 className="review__title">
@@ -23,7 +37,7 @@ const ReviewSection = () => {
               We started using Choicie quite recently. We adjusted our menu and
               increased the restaurant’s revenue thanks to live feedback.
             </p>
-            <p className="review__description review__description--margin-top">
+            <p className="review__description review__description--margin">
               <strong>Nelly Spender</strong> — Restaurant name
             </p>
           </div>
