@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 import Container from "shared/components/Container";
 
@@ -8,6 +9,8 @@ import { ReactComponent as BiggestFeedbackIcon } from "assets/icons/DashboardSec
 import "./DashboardSection.scss";
 
 const DashboardSection = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
   return (
     <section className="dashboard" id="about">
       <Container className="dashboard__container">
@@ -31,7 +34,11 @@ const DashboardSection = () => {
               automatically translate it into the users’ native language and add
               food photos.
             </p>
-            <CreationMenuIcon className="offer-list__icon" />
+            <CreationMenuIcon
+              width={isDesktop ? null : "240px"}
+              height={isDesktop ? null : "150px"}
+              className="offer-list__icon"
+            />
           </li>
 
           <li className="offer-list__item offer-list__item--light-orange">
@@ -43,7 +50,11 @@ const DashboardSection = () => {
               cleanliness of the place and the taste of the food — all the
               feedback is available in one place.
             </p>
-            <BiggestFeedbackIcon className="offer-list__icon" />
+            <BiggestFeedbackIcon
+              width={isDesktop ? null : "240px"}
+              height={isDesktop ? null : "150px"}
+              className="offer-list__icon"
+            />
           </li>
         </ul>
       </Container>
