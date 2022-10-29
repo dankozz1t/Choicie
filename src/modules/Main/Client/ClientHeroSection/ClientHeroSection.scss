@@ -1,45 +1,84 @@
 @import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
 
 .client-hero {
-  padding: 119px 0;
+  @include media(mobile-tablet) {
+    padding: 60px 0;
+  }
+
+  @include media(tablet) {
+    padding: 119px 0;
+  }
 }
 
 .client-hero__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include media(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .client-hero__title {
-  margin-bottom: 24px;
-  width: 443px;
-
-  font-weight: 700;
-  font-size: 52px;
-  line-height: 1.23;
-
   color: $brand-black-color;
+
+  @include media(mobile-tablet) {
+    margin-bottom: 16px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  @include media(tablet) {
+    margin-bottom: 24px;
+    width: 443px;
+
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.23;
+  }
 }
 
 .client-hero__description {
-  margin-bottom: 52px;
-  width: 471px;
-
-  font-size: 14px;
-  line-height: 1.71;
-
   color: $gray_60-color;
+
+  @include media(mobile-tablet) {
+    margin-bottom: 32px;
+
+    font-size: 12px;
+    line-height: 1.66;
+  }
+
+  @include media(tablet) {
+    margin-bottom: 52px;
+    width: 471px;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .client-hero__link {
-  text-decoration: none;
   position: relative;
 
+  text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.25;
 
-  color: #3b2186;
+  color: $brand-blue-color;
+
+  @include media(mobile-tablet) {
+    display: block;
+    margin-bottom: 86px;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  @include media(tablet) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 
   &::before {
     content: " ";
@@ -56,14 +95,24 @@
     transition: opacity 500ms linear;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus:before {
     opacity: 1;
   }
 }
 
 .client-hero__comment {
-  margin-top: -135px;
-  margin-left: -100px;
+  @include media(mobile-tablet) {
+    margin: 0 auto;
+    margin-top: -50px;
 
-  width: 318px;
+    width: 90%;
+  }
+
+  @include media(tablet) {
+    margin-top: -135px;
+    margin-left: -100px;
+
+    width: 318px;
+  }
 }
