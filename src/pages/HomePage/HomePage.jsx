@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import classNames from "classnames";
 
@@ -19,10 +19,6 @@ import "./HomePage.scss";
 const HomePage = () => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const [isBurgerMenu, setIsBurgerMenu] = useState(isDesktop);
-
-  useEffect(() => {
-    setIsBurgerMenu(isDesktop);
-  }, [isDesktop]);
 
   const handleMenuClick = () => {
     setIsBurgerMenu(!isBurgerMenu);
