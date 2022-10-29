@@ -60,7 +60,7 @@ const Form = () => {
         onChange={handleInputChange}
       />
 
-      <Button secondary medium type="submit" style={{ width: "298px" }}>
+      <Button secondary medium type="submit" className="form__button">
         Send
       </Button>
     </form>

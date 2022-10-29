@@ -39,12 +39,22 @@ const Footer = ({ navigationItems }) => {
                 navigationItems={navigationItems}
                 styles={navigationStyles}
               />
-              <p className="footer__privacy-policy">Privacy Policy</p>
+              <a
+                href="https://en.wikipedia.org/wiki/Privacy_policy"
+                className="footer__privacy-policy"
+              >
+                Privacy Policy
+              </a>
             </div>
           )}
 
           {isDesktop && (
-            <p className="footer__privacy-policy">Privacy Policy</p>
+            <a
+              href="https://en.wikipedia.org/wiki/Privacy_policy"
+              className="footer__privacy-policy"
+            >
+              Privacy Policy
+            </a>
           )}
           <SocialList />
         </div>
