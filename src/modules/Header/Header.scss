@@ -1,6 +1,14 @@
 @import "src/shared/styles/variables.scss";
 @import "src/shared/styles/mixin.scss";
 
+.header--dark {
+  background-color: $blue-dark-color;
+}
+
+.header__burger-menu--white > svg {
+  fill: white;
+}
+
 .header {
   padding: 8px 0;
 

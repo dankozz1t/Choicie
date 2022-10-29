@@ -2,13 +2,13 @@
 @import "src/shared/styles/mixin.scss";
 
 .home-background-color {
-  background-color: $blue-dark-color;
-  height: 320px;
+  @include media(mobile-tablet) {
+    background-color: $yellow-light-color;
+    height: 908px;
+  }
 
-  &--height {
-    @include media(tablet) {
-      background-color: $blue-dark-color;
-      height: 1037px;
-    }
+  @include media(tablet) {
+    background-color: $blue-dark-color;
+    height: 1037px;
   }
 }

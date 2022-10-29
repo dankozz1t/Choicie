@@ -4,9 +4,4 @@
 .client-background-color {
   background-color: $client-bg-color;
   height: 1000px;
-
-  &--dark {
-    background-color: $blue-dark-color;
-    height: 265px;
-  }
 }

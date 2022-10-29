@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 import BurgerMenu from "shared/components/BurgerMenu";
 
@@ -14,18 +15,21 @@ const Header = (props) => {
   const { navigationItems, isBurgerMenu, isDesktop, handleMenuClick } = props;
 
   return (
-    <header className="header">
+    <header className={classNames("header", isBurgerMenu && "header--dark")}>
       <Container className="header__container">
         <div className="header__box">
           <BurgerMenu
-            className="header__burger-menu"
+            className={classNames(
+              "header__burger-menu",
+              isBurgerMenu && "header__burger-menu--white"
+            )}
             onClick={handleMenuClick}
           />
           <Logo className="header__logo" />
           {!isDesktop && <ButtonList />}
         </div>
 
-        {isBurgerMenu && (
+        {(isBurgerMenu || isDesktop) && (
           <Navigation
             navigationItems={navigationItems}
             styles={navigationStyles}

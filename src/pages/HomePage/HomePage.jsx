@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { useMediaQuery } from "react-responsive";
-import classNames from "classnames";
 
 import Header from "modules/Header";
 import homeNavigationItems from "./homeNavigationItems.json";
@@ -18,19 +18,18 @@ import "./HomePage.scss";
 
 const HomePage = () => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
-  const [isBurgerMenu, setIsBurgerMenu] = useState(isDesktop);
+  const [isBurgerMenu, setIsBurgerMenu] = useState(false);
+
+  !isDesktop && isBurgerMenu
+    ? disableBodyScroll(document)
+    : enableBodyScroll(document);
 
   const handleMenuClick = () => {
     setIsBurgerMenu(!isBurgerMenu);
   };
 
   return (
-    <div
-      className={classNames(
-        (isBurgerMenu || isDesktop) && "home-background-color",
-        isDesktop && "home-background-color--height"
-      )}
-    >
+    <div className="home-background-color">
       <Header
         isBurgerMenu={isBurgerMenu}
         isDesktop={isDesktop}
