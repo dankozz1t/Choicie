@@ -8,7 +8,7 @@
 
   @include media(tablet) {
     position: relative;
-    padding: 80px 0 720px 0;
+    padding: 80px 0 593px 0;
   }
 }
 
@@ -128,7 +128,7 @@
 
   @include media(tablet) {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
 
     width: 100%;
