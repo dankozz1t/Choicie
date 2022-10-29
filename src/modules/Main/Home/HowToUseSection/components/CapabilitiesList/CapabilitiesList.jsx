@@ -14,7 +14,6 @@ import { ReactComponent as Three3Icon } from "assets/icons/HowToUseSection/3.svg
 import { ReactComponent as Four4Icon } from "assets/icons/HowToUseSection/4.svg";
 
 import "swiper/scss";
-import "swiper/scss/scrollbar";
 import "swiper/scss/autoplay";
 
 import "./CapabilitiesList.scss";
