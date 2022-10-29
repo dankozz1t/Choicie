@@ -37,7 +37,7 @@ const HowToUseSection = () => {
                 </h3>
               </li>
             </ul>
-            <Button secondary medium textDark className="how-to-use__button">
+            <Button secondary medium className="how-to-use__button">
               Get Started
             </Button>
           </div>

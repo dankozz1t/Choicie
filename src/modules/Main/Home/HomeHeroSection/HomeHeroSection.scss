@@ -4,7 +4,6 @@
 .home-hero {
   @include media(mobile-tablet) {
     padding: 60px 0;
-    color: $brand-white-color;
   }
 
   @include media(tablet) {
@@ -83,6 +82,7 @@
 
   @include media(tablet) {
     min-width: 173px;
+    color: $dark-button-text-color;
   }
 }
 

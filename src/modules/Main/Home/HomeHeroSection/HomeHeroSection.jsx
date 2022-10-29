@@ -29,7 +29,7 @@ const HomeHeroSection = () => {
             </p>
 
             {isDesktop ? (
-              <Button secondary medium textDark className="home-hero_button">
+              <Button secondary medium className="home-hero_button">
                 Get Started
               </Button>
             ) : (

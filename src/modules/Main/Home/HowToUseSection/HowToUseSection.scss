@@ -117,5 +117,6 @@
 
   @include media(tablet) {
     width: 173px;
+    color: $dark-button-text-color;
   }
 }
