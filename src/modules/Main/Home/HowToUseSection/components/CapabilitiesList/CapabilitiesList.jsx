@@ -63,8 +63,6 @@ const CapabilitiesList = () => {
       slidesPerView={1.3}
       autoplay
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide tag="li">
         <ScanForeignLangIcon />
