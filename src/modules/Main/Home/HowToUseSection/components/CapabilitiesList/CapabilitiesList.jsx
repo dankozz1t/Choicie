@@ -8,10 +8,11 @@ import { ReactComponent as ScanForeignLangIcon } from "assets/icons/HowToUseSect
 import { ReactComponent as AutomaticallyTranslatedIcon } from "assets/icons/HowToUseSection/02_automaticallyTranslated.svg";
 import { ReactComponent as ScanForOrderIcon } from "assets/icons/HowToUseSection/03_scanForOrder.svg";
 import { ReactComponent as ShareIcon } from "assets/icons/HowToUseSection/04_share.svg";
-import { ReactComponent as One1Icon } from "assets/icons/HowToUseSection/1.svg";
-import { ReactComponent as Two2Icon } from "assets/icons/HowToUseSection/2.svg";
-import { ReactComponent as Three3Icon } from "assets/icons/HowToUseSection/3.svg";
-import { ReactComponent as Four4Icon } from "assets/icons/HowToUseSection/4.svg";
+
+import { ReactComponent as One1Icon } from "assets/icons/HowToUseSection/number-01.svg";
+import { ReactComponent as Two2Icon } from "assets/icons/HowToUseSection/number-02.svg";
+import { ReactComponent as Three3Icon } from "assets/icons/HowToUseSection/number-03.svg";
+import { ReactComponent as Four4Icon } from "assets/icons/HowToUseSection/number-04.svg";
 
 import "swiper/scss";
 import "swiper/scss/autoplay";

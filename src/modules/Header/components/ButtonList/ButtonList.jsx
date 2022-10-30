@@ -3,8 +3,8 @@ import { useMediaQuery } from "react-responsive";
 
 import Button from "shared/components/Button";
 
-import { ReactComponent as LogoAndroidIcon } from "assets/icons/Button/android.svg";
-import { ReactComponent as LogoIOSIcon } from "assets/icons/Button/ios.svg";
+import { ReactComponent as LogoAndroidIcon } from "assets/icons/Button/01_android.svg";
+import { ReactComponent as LogoIOSIcon } from "assets/icons/Button/02_ios.svg";
 
 import "./ButtonList.scss";
 

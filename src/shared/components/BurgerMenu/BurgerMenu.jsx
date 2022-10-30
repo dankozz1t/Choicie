@@ -2,7 +2,7 @@ import React from "react";
 
 import "./BurgerMenu.scss";
 
-import { ReactComponent as Menu } from "assets/icons/BurgerMenu/burger-menu.svg";
+import { ReactComponent as Menu } from "assets/icons/BurgerMenu/01_burger-menu.svg";
 import classNames from "classnames";
 
 const BurgerMenu = ({ className, ...props }) => {

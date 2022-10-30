@@ -1,10 +1,10 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
-import { ReactComponent as RestaurantReviewIcon } from "assets/icons/HomeHeroSection/restaurantReview.svg";
-import { ReactComponent as MapTagsIcon } from "assets/icons/HomeHeroSection/mapTags.svg";
-import { ReactComponent as QrCodeIcon } from "assets/icons/HomeHeroSection/qrCode.svg";
-import { ReactComponent as BonusPointsIcon } from "assets/icons/HomeHeroSection/bonusPoints.svg";
+import { ReactComponent as RestaurantReviewIcon } from "assets/icons/HomeHeroSection/01_desktop-restaurant-review.svg";
+import { ReactComponent as MapTagsIcon } from "assets/icons/HomeHeroSection/02_desktop-map-tags.svg";
+import { ReactComponent as QrCodeIcon } from "assets/icons/HomeHeroSection/03_desktop-qr-code.svg";
+import { ReactComponent as BonusPointsIcon } from "assets/icons/HomeHeroSection/04_desktop-bonus-points.svg";
 
 import { ReactComponent as RestaurantReviewMobileIcon } from "assets/icons/HomeHeroSection/01_mobile-restaurant-review.svg";
 import { ReactComponent as QrCodeMenuMobileIcon } from "assets/icons/HomeHeroSection/02_mobile-qr-code-menu.svg";
