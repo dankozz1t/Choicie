@@ -6,22 +6,10 @@
     "tag": "NavLink"
   },
   {
-    "id": "about",
-    "to": "/about",
-    "text": "About",
-    "tag": "a"
-  },
-  {
     "id": "client",
     "to": "/client",
     "text": "Client",
     "tag": "NavLink"
-  },
-  {
-    "id": "contact",
-    "to": "/contact",
-    "text": "Contact",
-    "tag": "a"
   },
   {
     "id": "demo-api",

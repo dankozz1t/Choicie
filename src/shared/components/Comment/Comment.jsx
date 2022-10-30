@@ -3,20 +3,23 @@ import classNames from "classnames";
 
 import "./Comment.scss";
 
-const Comment = ({ title, Icon, name, coFounder, className }) => {
+const Comment = ({ title, body, Icon, name, coFounder, className }) => {
   return (
     <div className={classNames("comment", className)}>
-      <p className="comment__title">{title}</p>
+      {title && <p className="comment__title">{title}</p>}
+      <p className="comment__body">“{body}“</p>
       <div className="comment__block">
-        <Icon className="comment__icon" />
+        {Icon && <Icon className="comment__icon" />}
 
         <p className="comment__author-block">
           <span className="comment__name">{name}</span>
-          <span className="comment__co-founder">{coFounder}</span>
+          {coFounder && (
+            <span className="comment__co-founder">{coFounder}</span>
+          )}
         </p>
       </div>
     </div>
   );
 };
 
-export default Comment;
+export default React.memo(Comment);

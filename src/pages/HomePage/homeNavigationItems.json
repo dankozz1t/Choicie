@@ -28,5 +28,11 @@
     "to": "/contact",
     "text": "Contact",
     "tag": "a"
+  },
+  {
+    "id": "demo-api",
+    "to": "/demo-api",
+    "text": "API",
+    "tag": "NavLink"
   }
 ]

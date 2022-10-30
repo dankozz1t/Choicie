@@ -1,0 +1,44 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
+.demo {
+  padding: 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo__title {
+  margin-bottom: 20px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.44;
+
+  color: $brand-black-color;
+}
+
+.demo__button-list {
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.demo__button {
+  width: 120px;
+}
+
+.demo__post-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.demo__form {
+  display: flex;
+  gap: 20px;
+}

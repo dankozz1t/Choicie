@@ -1,7 +1,7 @@
 @import "src/shared/styles/variables.scss";
 @import "src/shared/styles/mixin.scss";
 
-.comment {
+.post {
   position: relative;
   z-index: 10;
 
@@ -19,7 +19,7 @@
   }
 }
 
-.comment__title {
+.post__title {
   margin-bottom: 16px;
 
   font-weight: 600;
@@ -29,7 +29,7 @@
   color: $text-comment-color;
 }
 
-.comment__body {
+.post__body {
   margin-bottom: 16px;
 
   font-style: italic;
@@ -39,27 +39,22 @@
   color: $text-comment-color;
 }
 
-.comment__block {
+.post__comments-button {
+  color: $brand-blue-color;
+}
+
+.post_comment-list {
+  margin-top: 20px;
   display: flex;
-  align-items: center;
-
-  @include media(mobile-tablet) {
-    gap: 10px;
-  }
-
-  @include media(tablet) {
-    gap: 16px;
-  }
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.comment__author-block {
-  font-size: 14px;
-  line-height: 1.71;
-
-  color: $text-comment-color;
+.post_comment-item {
+  display: flex;
 }
 
-.comment__name {
-  display: block;
-  font-weight: 600;
+.post_comment {
+  width: 350px;
+  background-color: $gray_20-color;
 }
