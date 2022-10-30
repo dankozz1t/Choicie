@@ -27,7 +27,7 @@ const Header = (props) => {
             onClick={handleMenuClick}
           />
           <Logo className="header__logo" />
-          {!isDesktop && <ButtonList />}
+          {!isDesktop && <ButtonList isDesktop={isDesktop} />}
         </div>
 
         {(isBurgerMenu || isDesktop) && (
@@ -36,7 +36,7 @@ const Header = (props) => {
             styles={navigationStyles}
           />
         )}
-        {isDesktop && <ButtonList />}
+        {isDesktop && <ButtonList isDesktop={isDesktop} />}
       </Container>
     </header>
   );

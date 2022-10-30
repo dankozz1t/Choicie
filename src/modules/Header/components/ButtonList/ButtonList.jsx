@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Button from "shared/components/Button";
 
@@ -8,9 +8,7 @@ import { ReactComponent as LogoIOSIcon } from "assets/icons/Button/02_ios.svg";
 
 import "./ButtonList.scss";
 
-const ButtonList = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const ButtonList = ({ isDesktop }) => {
   return (
     <ul className="button-list">
       <li>
@@ -43,6 +41,10 @@ const ButtonList = () => {
       </li>
     </ul>
   );
+};
+
+ButtonList.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default ButtonList;
