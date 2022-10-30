@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 import Comment from "shared/components/Comment";
@@ -12,9 +12,7 @@ import { ReactComponent as positiveIcon } from "assets/icons/Comment/01_positive
 
 import "./ClientHeroSection.scss";
 
-const ClientHeroSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const ClientHeroSection = ({ isDesktop }) => {
   return (
     <section className="client-hero">
       <Container className="client-hero__container">
@@ -61,6 +59,10 @@ const ClientHeroSection = () => {
       </Container>
     </section>
   );
+};
+
+ClientHeroSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default ClientHeroSection;

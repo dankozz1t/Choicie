@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 import Button from "shared/components/Button";
@@ -13,9 +13,7 @@ import { ReactComponent as ChartIcon } from "assets/icons/StagesDevelopment/06_c
 
 import "./StagesDevelopmentSection.scss";
 
-const StagesDevelopmentSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const StagesDevelopmentSection = ({ isDesktop }) => {
   return (
     <section className="stages-development">
       <Container>
@@ -70,6 +68,10 @@ const StagesDevelopmentSection = () => {
       />
     </section>
   );
+};
+
+StagesDevelopmentSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default StagesDevelopmentSection;

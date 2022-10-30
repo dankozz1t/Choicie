@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 
@@ -8,9 +8,7 @@ import { ReactComponent as BiggestFeedbackIcon } from "assets/icons/DashboardSec
 
 import "./DashboardSection.scss";
 
-const DashboardSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const DashboardSection = ({ isDesktop }) => {
   return (
     <section className="dashboard" id="about">
       <Container className="dashboard__container">
@@ -60,6 +58,10 @@ const DashboardSection = () => {
       </Container>
     </section>
   );
+};
+
+DashboardSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default DashboardSection;

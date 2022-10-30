@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 
@@ -11,9 +11,7 @@ import { ReactComponent as SyngentaIcon } from "assets/icons/RestaurantsTrustSec
 
 import "./RestaurantsTrustSection.scss";
 
-const RestaurantsTrustSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const RestaurantsTrustSection = ({ isDesktop }) => {
   return (
     <section className="restaurants-trust">
       <Container className="restaurants-trust__container">
@@ -41,6 +39,10 @@ const RestaurantsTrustSection = () => {
       </Container>
     </section>
   );
+};
+
+RestaurantsTrustSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default RestaurantsTrustSection;

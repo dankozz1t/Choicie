@@ -17,7 +17,7 @@ import Footer from "modules/Footer";
 import "./ClientPage.scss";
 
 const ClientPage = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 1000 });
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
 
   !isDesktop && isBurgerMenu
@@ -37,10 +37,10 @@ const ClientPage = () => {
         navigationItems={clientNavigationItems}
       />
       <main>
-        <ClientHeroSection />
-        <RestaurantsTrustSection />
-        <DashboardSection />
-        <StagesDevelopmentSection />
+        <ClientHeroSection isDesktop={isDesktop} />
+        <RestaurantsTrustSection isDesktop={isDesktop} />
+        <DashboardSection isDesktop={isDesktop} />
+        <StagesDevelopmentSection isDesktop={isDesktop} />
         <ReviewSection />
         <SubscribeSection />
       </main>
