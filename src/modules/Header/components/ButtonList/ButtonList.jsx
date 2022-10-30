@@ -20,7 +20,7 @@ const ButtonList = () => {
             Android
           </Button>
         ) : (
-          <Button primary small>
+          <Button primary circle>
             <LogoAndroidIcon />
           </Button>
         )}
@@ -32,7 +32,7 @@ const ButtonList = () => {
             iOS
           </Button>
         ) : (
-          <Button secondary small>
+          <Button secondary circle>
             <LogoIOSIcon />
           </Button>
         )}
