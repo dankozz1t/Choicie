@@ -2,32 +2,49 @@
 @import "src/shared/styles/mixin.scss";
 
 .demo {
-  padding: 60px 0;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 60px 0;
 }
 
 .demo__title {
-  margin-bottom: 20px;
   text-align: center;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.44;
 
   color: $brand-black-color;
+
+  @include media(mobile-tablet) {
+    margin-bottom: 16px;
+
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include media(tablet) {
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 1.44;
+  }
 }
 
 .demo__button-list {
-  margin-bottom: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  @include media(mobile-tablet) {
+    margin-bottom: 16px;
+  }
+
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .demo__button {
@@ -35,10 +52,11 @@
 }
 
 .demo__post-item:not(:last-child) {
-  margin-bottom: 20px;
-}
+  @include media(mobile-tablet) {
+    margin-bottom: 16px;
+  }
 
-.demo__form {
-  display: flex;
-  gap: 20px;
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
 }

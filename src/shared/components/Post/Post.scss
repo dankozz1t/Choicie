@@ -2,11 +2,10 @@
 @import "src/shared/styles/mixin.scss";
 
 .post {
-  position: relative;
-  z-index: 10;
-
   border-radius: 8px;
+
   background-color: $background-comment-color;
+  box-shadow: 0px 30px 60px rgba(21, 10, 51, 0.09);
 
   @include media(mobile-tablet) {
     padding: 25px;
@@ -14,22 +13,19 @@
 
   @include media(tablet) {
     padding: 32px;
-
-    box-shadow: 0px 30px 60px rgba(21, 10, 51, 0.09);
   }
 }
 
 .post__title {
+  color: $text-comment-color;
   margin-bottom: 16px;
 
   font-weight: 600;
   font-size: 14px;
   line-height: 1.71;
-
-  color: $text-comment-color;
 }
 
-.post__title-edit {
+.post--edit {
   outline: none;
   width: 95%;
 }
@@ -46,7 +42,16 @@
 
 .post__button-list {
   display: flex;
-  gap: 30px;
+
+  @include media(mobile-tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  @include media(tablet) {
+    gap: 30px;
+  }
 }
 
 .post__comments-button {
@@ -54,17 +59,29 @@
 }
 
 .post_comment-list {
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  @include media(mobile-tablet) {
+    margin-top: 16px;
+  }
+
+  @include media(tablet) {
+    margin-top: 20px;
+  }
 }
 
 .post_comment-item {
-  display: flex;
+  @include media(tablet) {
+    display: flex;
+  }
 }
 
 .post_comment {
-  width: 350px;
   background-color: $gray_20-color;
+
+  @include media(tablet) {
+    width: 350px;
+  }
 }

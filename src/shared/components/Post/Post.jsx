@@ -96,7 +96,7 @@ const Post = ({ title, body, id, className, onDelete }) => {
               type="text"
               name="title"
               value={post.title}
-              className="post__title post__title-edit"
+              className="post__title post--edit"
               onChange={handleInputChange}
             />
           ) : (
@@ -109,7 +109,7 @@ const Post = ({ title, body, id, className, onDelete }) => {
             type="text"
             name="body"
             value={post.body}
-            className="post__title post__title-edit"
+            className="post__body post--edit"
             onChange={handleInputChange}
           />
         ) : (
@@ -144,7 +144,7 @@ const Post = ({ title, body, id, className, onDelete }) => {
               className="post__put-button"
               onClick={handlePatchClick}
             >
-              {isUpdatePatch ? "Send / (PATCH)" : "Update only text (PATCH)"}
+              {isUpdatePatch ? "Send / (PATCH)" : "Update text (PATCH)"}
             </Button>
           </li>
           <li>
