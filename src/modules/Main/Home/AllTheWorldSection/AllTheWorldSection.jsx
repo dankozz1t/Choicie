@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 
@@ -8,9 +8,7 @@ import { ReactComponent as MapMobileIcon } from "assets/icons/AllTheWorldSection
 
 import "./AllTheWorldSection.scss";
 
-const AllTheWorldSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const AllTheWorldSection = ({ isDesktop }) => {
   return (
     <section className="all-the-world">
       <Container className="all-the-world__container">
@@ -36,6 +34,10 @@ const AllTheWorldSection = () => {
       </Container>
     </section>
   );
+};
+
+AllTheWorldSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default AllTheWorldSection;

@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 import Button from "shared/components/Button";
@@ -9,9 +9,7 @@ import { ReactComponent as SocialNetworkMobileIcon } from "assets/icons/SocialNe
 
 import "./SocialNetworkSection.scss";
 
-const SocialNetworkSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const SocialNetworkSection = ({ isDesktop }) => {
   return (
     <section className="social-network">
       <Container className="social-network__container">
@@ -43,6 +41,10 @@ const SocialNetworkSection = () => {
       </Container>
     </section>
   );
+};
+
+SocialNetworkSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default SocialNetworkSection;

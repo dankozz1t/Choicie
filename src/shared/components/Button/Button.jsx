@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames/bind";
 
 import "./Button.scss";
@@ -35,6 +36,18 @@ const Button = (props) => {
   );
 };
 
-//!TODO: write PropTypes for props
+Button.propTypes = {
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  medium: PropTypes.bool,
+  small: PropTypes.bool,
+  circle: PropTypes.bool,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
-export default Button;
+export default React.memo(Button);

@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./AboutSection.scss";
-
 import aboutImage from "assets/images/AboutSection/about-desktop@1x.png";
 import Container from "shared/components/Container";
+
+import "./AboutSection.scss";
 
 const AboutSection = () => {
   return (

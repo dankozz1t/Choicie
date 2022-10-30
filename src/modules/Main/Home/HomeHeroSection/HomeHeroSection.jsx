@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Button from "shared/components/Button";
 import Container from "shared/components/Container";
@@ -10,9 +10,7 @@ import heroImage from "assets/images/HomeHeroSection/hero-desktop@1x.png";
 
 import "./HomeHeroSection.scss";
 
-const HomeHeroSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const HomeHeroSection = ({ isDesktop }) => {
   return (
     <section className="home-hero">
       <Container className="home-hero__container">
@@ -44,10 +42,14 @@ const HomeHeroSection = () => {
             alt="A person makes an order through the phone from a restaurant"
           />
         </div>
-        <FeaturesList />
+        <FeaturesList isDesktop={isDesktop} />
       </Container>
     </section>
   );
+};
+
+HomeHeroSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default HomeHeroSection;

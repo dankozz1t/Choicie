@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useMediaQuery } from "react-responsive";
 
 import Container from "shared/components/Container";
 import Logo from "shared/components/Logo";
@@ -16,9 +15,7 @@ import bgMobileIcon from "assets/icons/Footer/01_mobile_footer.svg";
 import navigationStyles from "./NavigationFooter.module.scss";
 import "./Footer.scss";
 
-const Footer = ({ navigationItems }) => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const Footer = ({ navigationItems, isDesktop }) => {
   return (
     <footer
       className="footer"
@@ -74,6 +71,7 @@ Footer.propTypes = {
       to: PropTypes.string.isRequired,
     })
   ).isRequired,
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default Footer;

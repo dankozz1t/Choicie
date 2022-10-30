@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import "./Comment.scss";
@@ -20,6 +21,15 @@ const Comment = ({ title, body, Icon, name, coFounder, className }) => {
       </div>
     </div>
   );
+};
+
+Comment.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string.isRequired,
+  Icon: PropTypes.object,
+  name: PropTypes.string,
+  coFounder: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default React.memo(Comment);

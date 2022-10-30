@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 import Button from "shared/components/Button";
@@ -10,13 +11,13 @@ import { ReactComponent as NoInstallIcon } from "assets/icons/HowToUseSection/07
 
 import "./HowToUseSection.scss";
 
-const HowToUseSection = () => {
+const HowToUseSection = ({ isDesktop }) => {
   return (
     <section className="how-to-use" id="how-to-use">
       <Container>
         <h2 className="how-to-use__title">How do I use Choicie?</h2>
         <div className="how-to-use__wrapper">
-          <CapabilitiesList />
+          <CapabilitiesList isDesktop={isDesktop} />
 
           <div className="get-started">
             <ul className="get-started__list">
@@ -45,6 +46,10 @@ const HowToUseSection = () => {
       </Container>
     </section>
   );
+};
+
+HowToUseSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default HowToUseSection;

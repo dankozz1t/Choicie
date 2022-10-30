@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Header from "modules/Header";
 
@@ -16,8 +16,7 @@ import Footer from "modules/Footer";
 
 import "./ClientPage.scss";
 
-const ClientPage = () => {
-  const isDesktop = useMediaQuery({ minWidth: 1000 });
+const ClientPage = ({ isDesktop }) => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
 
   !isDesktop && isBurgerMenu
@@ -44,9 +43,13 @@ const ClientPage = () => {
         <ReviewSection />
         <SubscribeSection />
       </main>
-      <Footer navigationItems={clientNavigationItems} />
+      <Footer navigationItems={clientNavigationItems} isDesktop={isDesktop} />
     </div>
   );
+};
+
+ClientPage.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default ClientPage;

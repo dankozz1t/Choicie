@@ -14,6 +14,11 @@
   @include media(tablet) {
     padding: 32px;
   }
+
+  &--edit {
+    outline: none;
+    width: 95%;
+  }
 }
 
 .post__title {
@@ -23,11 +28,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.71;
-}
-
-.post--edit {
-  outline: none;
-  width: 95%;
 }
 
 .post__body {
@@ -54,7 +54,7 @@
   }
 }
 
-.post__comments-button {
+.post__comment-button {
   color: $brand-blue-color;
 }
 

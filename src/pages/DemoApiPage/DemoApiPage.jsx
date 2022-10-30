@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import demoNavigationItems from "./demoNavigationItems.json";
 
@@ -10,8 +10,7 @@ import DemoSection from "modules/Main/Demo/DemoSection";
 
 import "./DemoApiPage.scss";
 
-const DemoApiPage = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+const DemoApiPage = ({ isDesktop }) => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
 
   !isDesktop && isBurgerMenu
@@ -33,9 +32,13 @@ const DemoApiPage = () => {
       <main>
         <DemoSection />
       </main>
-      <Footer navigationItems={demoNavigationItems} />
+      <Footer navigationItems={demoNavigationItems} isDesktop={isDesktop} />
     </div>
   );
+};
+
+DemoApiPage.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default DemoApiPage;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import PropTypes from "prop-types";
 import classNames from "classnames";
+import { toast } from "react-toastify";
 
 import { getCommentService } from "shared/service/comments.service";
 import {
@@ -121,7 +122,7 @@ const Post = ({ title, body, id, className, onDelete }) => {
             <Button
               secondary
               small
-              className="post__comments-button"
+              className="post__comment-button"
               onClick={handleGetCommentsClick}
             >
               {isShowComments ? "close comments" : "open comments"}
@@ -180,6 +181,14 @@ const Post = ({ title, body, id, className, onDelete }) => {
       )}
     </>
   );
+};
+
+Post.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  onDelete: PropTypes.func,
 };
 
 export default React.memo(Post);

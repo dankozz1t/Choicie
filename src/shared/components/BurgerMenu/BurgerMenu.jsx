@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./BurgerMenu.scss";
 
@@ -17,4 +18,8 @@ const BurgerMenu = ({ className, ...props }) => {
   );
 };
 
-export default BurgerMenu;
+BurgerMenu.propTypes = {
+  className: PropTypes.string,
+};
+
+export default React.memo(BurgerMenu);

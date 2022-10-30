@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import { ReactComponent as RestaurantReviewIcon } from "assets/icons/HomeHeroSection/01_desktop-restaurant-review.svg";
 import { ReactComponent as MapTagsIcon } from "assets/icons/HomeHeroSection/02_desktop-map-tags.svg";
@@ -13,9 +13,7 @@ import { ReactComponent as BonusPointsMobileIcon } from "assets/icons/HomeHeroSe
 
 import "./FeaturesList.scss";
 
-const FeaturesList = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const FeaturesList = ({ isDesktop }) => {
   return (
     <>
       <h2 className="features__title">
@@ -103,6 +101,10 @@ const FeaturesList = () => {
       )}
     </>
   );
+};
+
+FeaturesList.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default FeaturesList;

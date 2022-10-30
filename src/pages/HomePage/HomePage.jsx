@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Header from "modules/Header";
 import homeNavigationItems from "./homeNavigationItems.json";
@@ -16,8 +16,7 @@ import Footer from "modules/Footer";
 
 import "./HomePage.scss";
 
-const HomePage = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+const HomePage = ({ isDesktop }) => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
 
   !isDesktop && isBurgerMenu
@@ -37,17 +36,21 @@ const HomePage = () => {
         navigationItems={homeNavigationItems}
       />
       <main>
-        <HomeHeroSection />
+        <HomeHeroSection isDesktop={isDesktop} />
         {isDesktop && <AboutSection />}
-        <UniversalMenuSection />
-        <SocialNetworkSection />
-        <HowToUseSection />
-        <AllTheWorldSection />
+        <UniversalMenuSection isDesktop={isDesktop} />
+        <SocialNetworkSection isDesktop={isDesktop} />
+        <HowToUseSection isDesktop={isDesktop} />
+        <AllTheWorldSection isDesktop={isDesktop} />
         <SubscribeSection />
       </main>
-      <Footer navigationItems={homeNavigationItems} />
+      <Footer navigationItems={homeNavigationItems} isDesktop={isDesktop} />
     </div>
   );
+};
+
+HomePage.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default HomePage;

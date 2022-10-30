@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Scrollbar, A11y } from "swiper";
@@ -19,9 +19,7 @@ import "swiper/scss/autoplay";
 
 import "./CapabilitiesList.scss";
 
-const CapabilitiesList = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const CapabilitiesList = ({ isDesktop }) => {
   if (isDesktop) {
     return (
       <ul className="capabilities__list">
@@ -98,6 +96,10 @@ const CapabilitiesList = () => {
       <span slot="container-end" className="slider--margin-bot"></span>
     </Swiper>
   );
+};
+
+CapabilitiesList.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default CapabilitiesList;

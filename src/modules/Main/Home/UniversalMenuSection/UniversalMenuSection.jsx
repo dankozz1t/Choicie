@@ -1,5 +1,5 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
+import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
 import Button from "shared/components/Button";
@@ -9,9 +9,7 @@ import { ReactComponent as UniversalMenuMobileIcon } from "assets/icons/Universa
 
 import "./UniversalMenuSection.scss";
 
-const UniversalMenuSection = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
+const UniversalMenuSection = ({ isDesktop }) => {
   return (
     <section className="universal-menu">
       <Container className="universal-menu__container">
@@ -44,6 +42,10 @@ const UniversalMenuSection = () => {
       </Container>
     </section>
   );
+};
+
+UniversalMenuSection.propTypes = {
+  isDesktop: PropTypes.bool.isRequired,
 };
 
 export default UniversalMenuSection;
