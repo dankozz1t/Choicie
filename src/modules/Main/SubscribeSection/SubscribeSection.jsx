@@ -11,8 +11,6 @@ const SubscribeSection = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Form Submit: ", input);
   };
 
   const handleInputChange = (e) => {
