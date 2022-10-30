@@ -15,4 +15,8 @@
 
 .button-list__button {
   width: 147px;
+
+  &--dark {
+    color: $brand-blue-color;
+  }
 }

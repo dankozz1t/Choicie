@@ -27,7 +27,11 @@ const ButtonList = () => {
       </li>
       <li>
         {isDesktop ? (
-          <Button secondary medium textDark className="button-list__button">
+          <Button
+            secondary
+            medium
+            className="button-list__button button-list__button--dark"
+          >
             <LogoIOSIcon />
             iOS
           </Button>

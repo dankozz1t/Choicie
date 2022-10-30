@@ -20,16 +20,18 @@
   }
 }
 
-.button--circle {
-  padding: 15px;
-}
+.button--secondary {
+  color: $light-button-text-color;
+  background-color: $yellow-button-color;
 
-.button--small {
-  padding: 8px 16px;
-}
+  &:active {
+    background-color: $yellow-button-focus-color;
+  }
 
-.button--medium {
-  padding: 14px 24px;
+  &:disabled {
+    background-color: $yellow-button-disabled-color;
+    color: $yellow-button-color;
+  }
 }
 
 .button--primary {
@@ -46,20 +48,14 @@
   }
 }
 
-.button--secondary {
-  color: $light-button-text-color;
-  background-color: $yellow-button-color;
-
-  &:active {
-    background-color: $yellow-button-focus-color;
-  }
-
-  &:disabled {
-    background-color: $yellow-button-disabled-color;
-    color: $yellow-button-color;
-  }
+.button--medium {
+  padding: 14px 24px;
 }
 
-.button--text-blue {
-  color: $brand-blue-color;
+.button--small {
+  padding: 8px 16px;
+}
+
+.button--circle {
+  padding: 15px;
 }

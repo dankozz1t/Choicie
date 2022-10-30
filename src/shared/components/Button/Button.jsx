@@ -5,25 +5,25 @@ import "./Button.scss";
 
 const Button = (props) => {
   const {
-    children,
     primary,
     secondary,
-    small,
     medium,
-    textDark,
+    small,
+    circle,
     onClick,
     className,
+    children,
     ...otherProps
   } = props;
 
   const classes = classNames(
     {
       button: true,
-      "button--small": small,
-      "button--medium": medium,
       "button--primary": primary,
       "button--secondary": secondary,
-      "button--text-blue": textDark,
+      "button--medium": medium,
+      "button--small": small,
+      "button--circle": circle,
     },
     className
   );
