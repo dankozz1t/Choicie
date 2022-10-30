@@ -15,8 +15,6 @@ const Form = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Form Submit: ", data);
   };
 
   const handleInputChange = (e) => {
