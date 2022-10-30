@@ -29,6 +29,11 @@
   color: $text-comment-color;
 }
 
+.post__title-edit {
+  outline: none;
+  width: 95%;
+}
+
 .post__body {
   margin-bottom: 16px;
 
@@ -37,6 +42,11 @@
   line-height: 1.71;
 
   color: $text-comment-color;
+}
+
+.post__button-list {
+  display: flex;
+  gap: 30px;
 }
 
 .post__comments-button {

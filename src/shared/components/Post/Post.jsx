@@ -1,26 +1,32 @@
-import classNames from "classnames";
 import React, { useState } from "react";
-
 import { toast } from "react-toastify";
+import classNames from "classnames";
 
 import { getCommentService } from "shared/service/comments.service";
+import {
+  updateAllPostService,
+  updateBodyPostService,
+} from "shared/service/posts.service";
 
 import Button from "shared/components/Button";
 import Comment from "shared/components/Comment";
 
 import "./Post.scss";
-import { updatePostService } from "shared/service/posts.service";
 
 const Post = ({ title, body, id, className, onDelete }) => {
-  console.log("Post: ", id);
-
+  const [post, setPost] = useState({ title, body, id });
   const [comments, setComments] = useState([]);
-  const [isUpdate, setIsUpdate] = useState();
+
+  const [isUpdatePut, setIsUpdatePut] = useState();
+  const [isUpdatePatch, setIsUpdatePatch] = useState();
 
   const [isShowComments, setIsShowComments] = useState();
-  const [post, setPost] = useState({ title, body, id });
 
   const handleGetCommentsClick = () => {
+    if (isShowComments) {
+      return setIsShowComments(!isShowComments);
+    }
+
     getCommentService(id)
       .then((response) => {
         setComments(response.data);
@@ -41,18 +47,38 @@ const Post = ({ title, body, id, className, onDelete }) => {
   };
 
   const handlePutClick = () => {
-    if (!isUpdate) {
-      return setIsUpdate(!isUpdate);
+    if (!isUpdatePut) {
+      return setIsUpdatePut(!isUpdatePut);
     }
 
-    updatePostService(id, { ...post, userId: 1 })
+    updateAllPostService(id, { ...post, userId: 1 })
       .then((response) => {
         setPost(response.data);
 
         toast.success(`Status: ${response.status}`);
       })
       .finally(() => {
-        setIsUpdate(!isUpdate);
+        setIsUpdatePut(!isUpdatePut);
+      })
+      .catch((error) => {
+        toast.error(`Eroor: ${error.message}`);
+        setPost({ title, body, id });
+      });
+  };
+
+  const handlePatchClick = () => {
+    if (!isUpdatePatch) {
+      return setIsUpdatePatch(!isUpdatePatch);
+    }
+
+    updateBodyPostService(id, { body: post.body, userId: 1 })
+      .then((response) => {
+        setPost(response.data);
+
+        toast.success(`Status: ${response.status}`);
+      })
+      .finally(() => {
+        setIsUpdatePatch(!isUpdatePatch);
       })
       .catch((error) => {
         toast.error(`Eroor: ${error.message}`);
@@ -65,11 +91,12 @@ const Post = ({ title, body, id, className, onDelete }) => {
       <div className={classNames("post", className)}>
         <h2 className="post__title">
           №{post.id}
-          {isUpdate ? (
+          {isUpdatePut ? (
             <input
               type="text"
               name="title"
               value={post.title}
+              className="post__title post__title-edit"
               onChange={handleInputChange}
             />
           ) : (
@@ -77,43 +104,60 @@ const Post = ({ title, body, id, className, onDelete }) => {
           )}
         </h2>
 
-        {isUpdate ? (
-          <input
+        {isUpdatePut || isUpdatePatch ? (
+          <textarea
             type="text"
             name="body"
             value={post.body}
+            className="post__title post__title-edit"
             onChange={handleInputChange}
           />
         ) : (
           <p className="post__body">{post.body}</p>
         )}
 
-        <Button
-          secondary
-          small
-          className="post__comments-button"
-          onClick={handleGetCommentsClick}
-        >
-          {isShowComments ? "close comments" : "open comments"}
-        </Button>
-
-        <Button
-          primary
-          small
-          className="post__put-button"
-          onClick={handlePutClick}
-        >
-          {isUpdate ? "Update / PUT" : "PUT"}
-        </Button>
-
-        <Button
-          primary
-          small
-          onClick={() => onDelete(id)}
-          className="post__delete-button"
-        >
-          DELETE
-        </Button>
+        <ul className="post__button-list">
+          <li>
+            <Button
+              secondary
+              small
+              className="post__comments-button"
+              onClick={handleGetCommentsClick}
+            >
+              {isShowComments ? "close comments" : "open comments"}
+            </Button>
+          </li>
+          <li>
+            <Button
+              primary
+              small
+              className="post__put-button"
+              onClick={handlePutClick}
+            >
+              {isUpdatePut ? "Send (PUT)" : "Update All (PUT)"}
+            </Button>
+          </li>
+          <li>
+            <Button
+              primary
+              small
+              className="post__put-button"
+              onClick={handlePatchClick}
+            >
+              {isUpdatePatch ? "Send / (PATCH)" : "Update only text (PATCH)"}
+            </Button>
+          </li>
+          <li>
+            <Button
+              primary
+              small
+              onClick={() => onDelete(id)}
+              className="post__delete-button"
+            >
+              DELETE
+            </Button>
+          </li>
+        </ul>
       </div>
 
       {isShowComments && (

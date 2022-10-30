@@ -13,8 +13,12 @@ export const createPostService = async (body) => {
   return await publicApi.post(`/posts`, body);
 };
 
-export const updatePostService = async (id, body) => {
+export const updateAllPostService = async (id, body) => {
   return await publicApi.put(`/posts/${id}`, body);
+};
+
+export const updateBodyPostService = async (id, body) => {
+  return await publicApi.patch(`/posts/${id}`, body);
 };
 
 export const deletePostService = async (id) => {
