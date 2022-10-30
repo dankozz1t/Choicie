@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
 
 import Container from "shared/components/Container";
@@ -62,6 +63,17 @@ const Footer = ({ navigationItems }) => {
       </Container>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  navigationItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Footer;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import BurgerMenu from "shared/components/BurgerMenu";
@@ -39,6 +40,20 @@ const Header = (props) => {
       </Container>
     </header>
   );
+};
+
+Header.propTypes = {
+  navigationItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  isBurgerMenu: PropTypes.bool.isRequired,
+  isDesktop: PropTypes.bool.isRequired,
+  handleMenuClick: PropTypes.func.isRequired,
 };
 
 export default Header;

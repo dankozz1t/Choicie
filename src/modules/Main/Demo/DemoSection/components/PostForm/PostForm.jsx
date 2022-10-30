@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import Button from "shared/components/Button";
 
@@ -49,6 +50,10 @@ const PostForm = ({ onSubmit }) => {
       </Button>
     </form>
   );
+};
+
+PostForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default PostForm;

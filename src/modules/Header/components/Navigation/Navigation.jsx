@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 const Navigation = ({ navigationItems, styles }) => {
@@ -29,6 +30,16 @@ const Navigation = ({ navigationItems, styles }) => {
   );
 };
 
-//TODO: PropTypes
+Navigation.propTypes = {
+  navigationItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  styles: PropTypes.shape(PropTypes.string.isRequired).isRequired,
+};
 
 export default Navigation;
