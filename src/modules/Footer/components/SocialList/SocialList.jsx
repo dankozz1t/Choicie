@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./SocialList.scss";
-
 import socialItems from "./socialItems.json";
+
+import "./SocialList.scss";
 
 const SocialList = () => {
   return (
