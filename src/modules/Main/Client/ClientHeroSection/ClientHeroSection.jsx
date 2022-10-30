@@ -48,10 +48,10 @@ const ClientHeroSection = () => {
 
           <Comment
             className="client-hero__comment"
-            title={
+            body={
               isDesktop
-                ? "“We edited the menu after using this app. Now our sales are 30% higher“"
-                : "“Thanks to Choicie, we edited the menu, which resulted in 30% increase in sales“"
+                ? "We edited the menu after using this app. Now our sales are 30% higher"
+                : "Thanks to Choicie, we edited the menu, which resulted in 30% increase in sales"
             }
             name="Anastasia Glorman,"
             Icon={positiveIcon}
