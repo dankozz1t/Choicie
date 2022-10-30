@@ -1,0 +1,32 @@
+@import "src/shared/styles/variables.scss";
+@import "src/shared/styles/mixin.scss";
+
+.demo-form {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  @include media(mobile-tablet) {
+    flex-direction: column;
+    gap: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  @include media(tablet) {
+    gap: 20px;
+
+    margin-bottom: 20px;
+  }
+}
+
+.demo-form__input {
+  border: 1px solid $brand-blue-color;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.demo-form__button {
+  width: 100px;
+}
