@@ -1,21 +1,18 @@
 @import "src/shared/styles/variables.scss";
 @import "src/shared/styles/mixin.scss";
 
-.header--dark {
-  background-color: $blue-dark-color;
-}
-
-.header__burger-menu--white > svg {
-  fill: white;
-}
-
 .header {
   padding: 8px 0;
+
+  &--dark {
+    background-color: $blue-dark-color;
+  }
 
   @include media(tablet) {
     padding-top: 40px;
   }
 }
+
 .header__box {
   @include media(mobile-tablet) {
     display: flex;
@@ -26,6 +23,10 @@
 
 .header__burger-menu {
   margin-right: 16px;
+
+  &--white > svg {
+    fill: white;
+  }
 
   @include media(tablet) {
     display: none;
