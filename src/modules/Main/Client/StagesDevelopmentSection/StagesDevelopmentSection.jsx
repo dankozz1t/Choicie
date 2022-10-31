@@ -18,8 +18,10 @@ const StagesDevelopmentSection = ({ isDesktop }) => {
     <section className="stages-development">
       <Container>
         <h2 className="stages-development__title">
-          Choicie for cafes and restaurants. Five growth drivers for your
-          development
+          Choicie for cafes and restaurants.
+          <span className="stages-development__title--block">
+            Five growth drivers for your development
+          </span>
         </h2>
         <p className="stages-development__description">
           Choicie helps you analyze user actions and improve your cafe or

@@ -15,6 +15,10 @@
 .stages-development__title {
   color: $brand-black-color;
 
+  &--block {
+    display: block;
+  }
+
   @include media(mobile-tablet) {
     margin-bottom: 16px;
 

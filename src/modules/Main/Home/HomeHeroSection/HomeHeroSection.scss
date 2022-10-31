@@ -39,6 +39,10 @@
 }
 
 .home-hero__title {
+  &--block {
+    display: block;
+  }
+
   @include media(mobile-tablet) {
     margin-bottom: 16px;
     font-weight: 600;

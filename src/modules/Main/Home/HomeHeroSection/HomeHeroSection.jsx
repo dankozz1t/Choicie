@@ -17,7 +17,8 @@ const HomeHeroSection = ({ isDesktop }) => {
         <div className="home-hero__wrapper">
           <div className="home-hero__info-box">
             <h1 className="home-hero__title">
-              All the restaurants in the world - with&nbsp;one tap
+              All the restaurants in the world -
+              <span className="home-hero__title--block">with one tap</span>
             </h1>
             <p className="home-hero__description">
               And a good friend with the same name. He understands that feeling
