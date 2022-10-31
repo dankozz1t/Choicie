@@ -2,13 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-const Navigation = ({ navigationItems, setIsBurgerMenu, styles }) => {
-  const handleCloseClick = () => {
-    setIsBurgerMenu(false);
-  };
-
+const Navigation = ({ navigationItems, onClick, styles }) => {
   return (
-    <nav className={styles.navigation} onClick={handleCloseClick}>
+    <nav className={styles.navigation} onClick={onClick}>
       <ul className={styles.navigation__list}>
         {navigationItems.map(({ id, to, text, tag }) => {
           if (tag === "a") {

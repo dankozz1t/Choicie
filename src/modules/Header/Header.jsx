@@ -27,6 +27,12 @@ const Header = (props) => {
     theme,
   } = props;
 
+  const handleCloseClick = () => {
+    if (isBurgerMenu) {
+      setIsBurgerMenu(false);
+    }
+  };
+
   return (
     <header className={classNames("header", isBurgerMenu && "header--dark")}>
       <Container className="header__container">
@@ -58,7 +64,7 @@ const Header = (props) => {
 
         {(isBurgerMenu || isDesktop) && (
           <Navigation
-            setIsBurgerMenu={setIsBurgerMenu}
+            onClick={handleCloseClick}
             navigationItems={navigationItems}
             styles={navigationStyles}
           />
