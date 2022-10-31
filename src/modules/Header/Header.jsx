@@ -18,8 +18,14 @@ const THEME = Object.freeze({
 });
 
 const Header = (props) => {
-  const { navigationItems, isBurgerMenu, isDesktop, handleMenuClick, theme } =
-    props;
+  const {
+    navigationItems,
+    isBurgerMenu,
+    setIsBurgerMenu,
+    isDesktop,
+    handleMenuClick,
+    theme,
+  } = props;
 
   return (
     <header className={classNames("header", isBurgerMenu && "header--dark")}>
@@ -52,6 +58,7 @@ const Header = (props) => {
 
         {(isBurgerMenu || isDesktop) && (
           <Navigation
+            setIsBurgerMenu={setIsBurgerMenu}
             navigationItems={navigationItems}
             styles={navigationStyles}
           />

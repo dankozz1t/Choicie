@@ -32,6 +32,7 @@ const HomePage = ({ isDesktop }) => {
       <Header
         theme={!isDesktop ? "secondary" : "primary"}
         isBurgerMenu={isBurgerMenu}
+        setIsBurgerMenu={setIsBurgerMenu}
         isDesktop={isDesktop}
         handleMenuClick={handleMenuClick}
         navigationItems={homeNavigationItems}

@@ -32,6 +32,7 @@ const ClientPage = ({ isDesktop }) => {
       <Header
         theme="secondary"
         isBurgerMenu={isBurgerMenu}
+        setIsBurgerMenu={setIsBurgerMenu}
         isDesktop={isDesktop}
         handleMenuClick={handleMenuClick}
         navigationItems={clientNavigationItems}
