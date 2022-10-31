@@ -30,6 +30,7 @@ const ClientPage = ({ isDesktop }) => {
   return (
     <div className="client-background-color">
       <Header
+        theme="secondary"
         isBurgerMenu={isBurgerMenu}
         isDesktop={isDesktop}
         handleMenuClick={handleMenuClick}
@@ -43,7 +44,11 @@ const ClientPage = ({ isDesktop }) => {
         <ReviewSection />
         <SubscribeSection />
       </main>
-      <Footer navigationItems={clientNavigationItems} isDesktop={isDesktop} />
+      <Footer
+        navigationItems={clientNavigationItems}
+        isDesktop={isDesktop}
+        isNavigation
+      />
     </div>
   );
 };

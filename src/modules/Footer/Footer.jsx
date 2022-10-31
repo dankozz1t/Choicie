@@ -15,7 +15,7 @@ import bgMobileIcon from "assets/icons/Footer/01_mobile_footer.svg";
 import navigationStyles from "./NavigationFooter.module.scss";
 import "./Footer.scss";
 
-const Footer = ({ navigationItems, isDesktop }) => {
+const Footer = ({ navigationItems, isDesktop, isNavigation }) => {
   return (
     <footer
       className="footer"
@@ -31,7 +31,7 @@ const Footer = ({ navigationItems, isDesktop }) => {
         </div>
 
         <div className="footer__wrapper">
-          {!isDesktop && (
+          {(!isDesktop || isNavigation) && (
             <div>
               <Navigation
                 navigationItems={navigationItems}
@@ -46,7 +46,7 @@ const Footer = ({ navigationItems, isDesktop }) => {
             </div>
           )}
 
-          {isDesktop && (
+          {isDesktop && !isNavigation && (
             <a
               href="https://en.wikipedia.org/wiki/Privacy_policy"
               className="footer__privacy-policy"
