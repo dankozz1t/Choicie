@@ -61,7 +61,7 @@ const CapabilitiesList = ({ isDesktop }) => {
       spaceBetween={50}
       slidesPerView={1.3}
       autoplay
-      scrollbar={{ draggable: true }}
+      scrollbar={{ draggable: true, dragSize: 52 }}
     >
       <SwiperSlide tag="li">
         <ScanForeignLangIcon />
@@ -91,7 +91,7 @@ const CapabilitiesList = ({ isDesktop }) => {
         <h3 className="capabilities__title">
           Share your impressions, tips, and ratings to help other Choicie users.
         </h3>
-        <Four4Icon className="capabilities__number" />
+        <Four4Icon className="capabilities__number " />
       </SwiperSlide>
       <span slot="container-end" className="slider--margin-bot"></span>
     </Swiper>
