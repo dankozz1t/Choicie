@@ -56,21 +56,20 @@ const CapabilitiesList = ({ isDesktop }) => {
 
   return (
     <Swiper
-      tag="ul"
       modules={[Scrollbar, Autoplay, A11y]}
       spaceBetween={50}
       slidesPerView={1.3}
       autoplay
       scrollbar={{ draggable: true, dragSize: 52 }}
     >
-      <SwiperSlide tag="li">
+      <SwiperSlide>
         <ScanForeignLangIcon />
         <h3 className="capabilities__title">
           Scan the QR-code on the foreign language menu.
         </h3>
         <One1Icon className="capabilities__number" />
       </SwiperSlide>
-      <SwiperSlide tag="li">
+      <SwiperSlide>
         <AutomaticallyTranslatedIcon />
         <h3 className="capabilities__title">
           Automatically get to the online version of menu — it will be
@@ -78,7 +77,7 @@ const CapabilitiesList = ({ isDesktop }) => {
         </h3>
         <Two2Icon className="capabilities__number" />
       </SwiperSlide>
-      <SwiperSlide tag="li">
+      <SwiperSlide>
         <ScanForOrderIcon />
         <h3 className="capabilities__title">
           Choose and order one or more dishes you like, then show your QR-code
@@ -86,7 +85,7 @@ const CapabilitiesList = ({ isDesktop }) => {
         </h3>
         <Three3Icon className="capabilities__number" />
       </SwiperSlide>
-      <SwiperSlide tag="li">
+      <SwiperSlide>
         <ShareIcon />
         <h3 className="capabilities__title">
           Share your impressions, tips, and ratings to help other Choicie users.

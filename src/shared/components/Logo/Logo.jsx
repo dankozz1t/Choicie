@@ -10,7 +10,11 @@ import "./Logo.scss";
 
 const Logo = ({ className }) => {
   return (
-    <Link to="/" className={classNames("logo", className)}>
+    <Link
+      to="/"
+      className={classNames("logo", className)}
+      aria-label="Logo Icon navigate to home page"
+    >
       <LogoIcon />
       <LogoTitle />
     </Link>

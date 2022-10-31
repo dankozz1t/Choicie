@@ -18,7 +18,7 @@ const ButtonList = ({ isDesktop }) => {
             Android
           </Button>
         ) : (
-          <Button primary circle>
+          <Button primary circle aria-label="download for android">
             <LogoAndroidIcon />
           </Button>
         )}
@@ -34,7 +34,7 @@ const ButtonList = ({ isDesktop }) => {
             iOS
           </Button>
         ) : (
-          <Button secondary circle>
+          <Button secondary circle aria-label="download for iOS">
             <LogoIOSIcon />
           </Button>
         )}

@@ -9,6 +9,7 @@ import classNames from "classnames";
 const BurgerMenu = ({ className, ...props }) => {
   return (
     <button
+      aria-label="burger menu for show navigation"
       className={classNames("burger-menu", className)}
       type="button"
       {...props}
