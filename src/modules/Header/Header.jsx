@@ -12,13 +12,26 @@ import Navigation from "./components/Navigation";
 import navigationStyles from "./NavigationHeader.module.scss";
 import "./Header.scss";
 
+const THEME = Object.freeze({
+  PRIMARY: "primary",
+  SECONDARY: "secondary",
+});
+
 const Header = (props) => {
-  const { navigationItems, isBurgerMenu, isDesktop, handleMenuClick } = props;
+  const { navigationItems, isBurgerMenu, isDesktop, handleMenuClick, theme } =
+    props;
 
   return (
     <header className={classNames("header", isBurgerMenu && "header--dark")}>
       <Container className="header__container">
-        <div className="header__box">
+        <div
+          className={classNames(
+            "header__box",
+            (isDesktop || !isBurgerMenu) &&
+              theme === THEME.SECONDARY &&
+              "header__box--secondary"
+          )}
+        >
           <BurgerMenu
             className={classNames(
               "header__burger-menu",
@@ -26,7 +39,14 @@ const Header = (props) => {
             )}
             onClick={handleMenuClick}
           />
-          <Logo className="header__logo" />
+          <Logo
+            className={classNames(
+              "header__logo",
+              (isDesktop || !isBurgerMenu) &&
+                theme === THEME.SECONDARY &&
+                "header__logo--secondary"
+            )}
+          />
           {!isDesktop && <ButtonList isDesktop={isDesktop} />}
         </div>
 
@@ -54,6 +74,7 @@ Header.propTypes = {
   isBurgerMenu: PropTypes.bool.isRequired,
   isDesktop: PropTypes.bool.isRequired,
   handleMenuClick: PropTypes.func.isRequired,
+  theme: PropTypes.oneOf([THEME.PRIMARY, THEME.SECONDARY]),
 };
 
 export default Header;

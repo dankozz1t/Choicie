@@ -24,6 +24,7 @@ const DemoApiPage = ({ isDesktop }) => {
   return (
     <div className="demo-background-color">
       <Header
+        theme="secondary"
         isBurgerMenu={isBurgerMenu}
         isDesktop={isDesktop}
         handleMenuClick={handleMenuClick}

@@ -67,3 +67,22 @@
   border-radius: 50px;
   background-color: $brand-yellow-color;
 }
+
+.header__logo--secondary > svg {
+  fill: $brand-blue-color;
+}
+
+.header__logo--secondary > svg + svg {
+  fill: $brand-black-color;
+}
+
+.header__box--secondary + nav > ul > li > a {
+  color: $gray_80-color;
+}
+
+.header__box--secondary + nav > ul > li > a[class$="active"] {
+  color: $brand-black-color;
+}
+.header__box--secondary + nav > ul > li > a[class$="active"]::before {
+  background-color: $brand-blue-color;
+}
