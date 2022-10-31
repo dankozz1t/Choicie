@@ -2,7 +2,13 @@
 @import "src/shared/styles/mixin.scss";
 
 .form {
-  width: 100%;
+  @include media(mobile-tablet) {
+    width: 100%;
+  }
+
+  @include media(tablet) {
+    width: 298px;
+  }
 }
 
 .form__input--margin {
