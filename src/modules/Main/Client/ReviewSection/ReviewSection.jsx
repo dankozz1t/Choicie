@@ -14,7 +14,7 @@ const ReviewSection = () => {
         <picture className="review__picture">
           <source
             srcSet={`${reviewDesktop1xImage} 1x, ${reviewDesktop2xImage} 2x`}
-            media="(min-width:1728px)"
+            media="(min-width:1000px)"
           />
           <source
             srcSet={`${reviewMobileImage} 1x`}
@@ -35,7 +35,8 @@ const ReviewSection = () => {
             </h2>
             <p className="review__description">
               We started using Choicie quite recently. We adjusted our menu and
-              increased the restaurant’s revenue thanks to live feedback.
+              increased the restaurant’s revenue thanks to live
+              <span className="review__description--block"> feedback.</span>
             </p>
             <p className="review__description review__description--margin">
               <strong>Nelly Spender</strong> — Restaurant name

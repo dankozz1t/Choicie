@@ -52,9 +52,8 @@
 
   @include media(tablet) {
     display: flex;
-    justify-content: space-between;
 
-    padding: 80px 70px 55px 150px;
+    padding: 80px 72px 56px 140px;
   }
 }
 
@@ -62,7 +61,7 @@
   position: relative;
 
   @include media(tablet) {
-    width: 442px;
+    padding-right: 60px;
   }
 
   &::after {
@@ -81,7 +80,7 @@
 
     @include media(tablet) {
       top: 0;
-      right: -60px;
+      right: 0px;
 
       height: 168px;
       width: 2px;
@@ -95,7 +94,7 @@
   }
 
   @include media(tablet) {
-    width: 198px;
+    padding-left: 60px;
   }
 }
 
@@ -112,6 +111,7 @@
   }
 
   @include media(tablet) {
+    display: inline-block;
     font-size: 18px;
     line-height: 1.33;
   }
@@ -133,11 +133,16 @@
   }
 
   @include media(tablet) {
+    display: inline-block;
     font-size: 14px;
     line-height: 1.71;
 
     &--margin {
       margin-top: 32px;
+    }
+
+    &--block {
+      display: block;
     }
   }
 }
