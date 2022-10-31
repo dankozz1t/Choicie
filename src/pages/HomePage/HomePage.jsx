@@ -30,6 +30,7 @@ const HomePage = ({ isDesktop }) => {
   return (
     <div className="home-background-color">
       <Header
+        theme={!isDesktop ? "secondary" : "primary"}
         isBurgerMenu={isBurgerMenu}
         isDesktop={isDesktop}
         handleMenuClick={handleMenuClick}
