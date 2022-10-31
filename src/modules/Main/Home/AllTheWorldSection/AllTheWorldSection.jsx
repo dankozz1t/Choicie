@@ -29,7 +29,7 @@ const AllTheWorldSection = ({ isDesktop }) => {
         {isDesktop ? (
           <MapDesktopIcon className="all-the-world__icon" />
         ) : (
-          <MapMobileIcon />
+          <MapMobileIcon width="100%" />
         )}
       </Container>
     </section>

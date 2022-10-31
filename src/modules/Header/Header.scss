@@ -16,14 +16,12 @@
 .header__box {
   @include media(mobile-tablet) {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }
 
 .header__burger-menu {
-  margin-right: 16px;
-
   &--white > svg {
     fill: white;
   }
@@ -44,8 +42,6 @@
   @include media(mobile-tablet) {
     width: 120px;
     height: 32px;
-
-    margin-right: 30px;
   }
 }
 
