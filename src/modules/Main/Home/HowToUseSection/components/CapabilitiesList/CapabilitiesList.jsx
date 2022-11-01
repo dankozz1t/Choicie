@@ -58,7 +58,7 @@ const CapabilitiesList = ({ isDesktop }) => {
     <Swiper
       modules={[Scrollbar, Autoplay, A11y]}
       spaceBetween={50}
-      slidesPerView={1.3}
+      slidesPerView={1.35}
       autoplay
       scrollbar={{ draggable: true, dragSize: 52 }}
     >
