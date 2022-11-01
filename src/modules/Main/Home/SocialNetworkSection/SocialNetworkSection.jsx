@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
+import SectionTitle from "shared/components/SectionTitle";
 import Button from "shared/components/Button";
 
 import socialNetworkImage from "assets/images/SocialNetworkSection/socialNetwork-desktop@1x.png";
@@ -23,7 +24,9 @@ const SocialNetworkSection = ({ isDesktop }) => {
         )}
 
         <div className="social-network__wrapper">
-          <h2 className="social-network__title">And a new social network</h2>
+          <SectionTitle className="social-network__title">
+            And a new social network
+          </SectionTitle>
 
           <p className="social-network__description">
             <span className="social-network__description--margin">

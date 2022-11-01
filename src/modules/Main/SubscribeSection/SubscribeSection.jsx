@@ -5,6 +5,7 @@ import Button from "shared/components/Button";
 import Input from "shared/components/Input";
 
 import "./SubscribeSection.scss";
+import SectionTitle from "shared/components/SectionTitle";
 
 const SubscribeSection = () => {
   const [input, setInput] = useState();
@@ -21,9 +22,10 @@ const SubscribeSection = () => {
     <section className="subscribe">
       <Container className="subscribe__container">
         <div>
-          <h2 className="subscribe__title">
+          <SectionTitle className="subscribe__title">
             Subscribe and become a part of Choicie
-          </h2>
+          </SectionTitle>
+
           <p className="subscribe__description">
             Leave your email and get all the information about product updates,
             blog updates, exclusive updates.

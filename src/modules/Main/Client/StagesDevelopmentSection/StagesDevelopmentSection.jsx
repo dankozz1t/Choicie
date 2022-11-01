@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
+import SectionTitle from "shared/components/SectionTitle";
 import Button from "shared/components/Button";
 
 import { ReactComponent as QualityIcon } from "assets/icons/StagesDevelopment/01_quality.svg";
@@ -17,12 +18,13 @@ const StagesDevelopmentSection = ({ isDesktop }) => {
   return (
     <section className="stages-development">
       <Container>
-        <h2 className="stages-development__title">
+        <SectionTitle className="stages-development__title">
           Choicie for cafes and restaurants.
           <span className="stages-development__title--block">
             Five growth drivers for your development
           </span>
-        </h2>
+        </SectionTitle>
+
         <p className="stages-development__description">
           Choicie helps you analyze user actions and improve your cafe or
           restaurant.

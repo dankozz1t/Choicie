@@ -29,20 +29,13 @@
 
 .universal-menu__title {
   margin-bottom: 24px;
-  color: $brand-black-color;
 
   @include media(mobile-tablet) {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 1.16;
   }
 
   @include media(tablet) {
     width: 485px;
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.44;
   }
 }
 

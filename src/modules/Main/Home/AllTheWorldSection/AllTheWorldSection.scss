@@ -40,8 +40,6 @@
 .all-the-world__title {
   font-weight: 700;
 
-  color: $brand-black-color;
-
   @include media(mobile-tablet) {
     margin-bottom: 32px;
     text-align: center;
@@ -52,9 +50,6 @@
 
   @include media(tablet) {
     margin-bottom: 32px;
-
-    font-size: 36px;
-    line-height: 1.44;
   }
 }
 

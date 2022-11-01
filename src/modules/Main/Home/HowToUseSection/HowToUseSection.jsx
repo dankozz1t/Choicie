@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
+import SectionTitle from "shared/components/SectionTitle";
 import Button from "shared/components/Button";
 import CapabilitiesList from "./components/CapabilitiesList";
 
@@ -15,7 +16,10 @@ const HowToUseSection = ({ isDesktop }) => {
   return (
     <section className="how-to-use" id="how-to-use">
       <Container>
-        <h2 className="how-to-use__title">How do I use Choicie?</h2>
+        <SectionTitle className="how-to-use__title">
+          How do I use Choicie?
+        </SectionTitle>
+
         <div className="how-to-use__wrapper">
           <CapabilitiesList isDesktop={isDesktop} />
 

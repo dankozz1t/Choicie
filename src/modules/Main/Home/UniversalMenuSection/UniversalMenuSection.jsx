@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Container from "shared/components/Container";
+import SectionTitle from "shared/components/SectionTitle";
 import Button from "shared/components/Button";
 
 import learnMoreImage from "assets/images/UniversalMenuSection/universalMenu-desktop@1x.png";
@@ -23,9 +24,10 @@ const UniversalMenuSection = ({ isDesktop }) => {
         )}
 
         <div className="universal-menu__wrapper">
-          <h2 className="universal-menu__title">
+          <SectionTitle className="universal-menu__title">
             Choicie is a universal menu for all restaurants.
-          </h2>
+          </SectionTitle>
+
           <p className="universal-menu__description">
             <span className="universal-menu__description--margin">
               Foreign language names are no longer a problem.

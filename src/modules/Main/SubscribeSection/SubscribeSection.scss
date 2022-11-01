@@ -31,11 +31,6 @@
     font-size: 18px;
     line-height: 1.33;
   }
-
-  @include media(tablet) {
-    font-size: 36px;
-    line-height: 1.44;
-  }
 }
 
 .subscribe__description {
